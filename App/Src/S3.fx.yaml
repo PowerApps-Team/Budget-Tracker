@@ -1,0 +1,16 @@
+S3 As screen:
+
+    Label5 As label:
+        Text: ="Text"
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Button1 As button:
+        Height: =183
+        Text: ="Button"
+        Width: =543
+        X: =486
+        Y: =177
+        ZIndex: =2
+
