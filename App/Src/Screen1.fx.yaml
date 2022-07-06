@@ -6,3 +6,11 @@ Screen1 As screen:
         Y: =55
         ZIndex: =1
 
+    Button3 As button:
+        Height: =168
+        Text: ="Button"
+        Width: =296
+        X: =552
+        Y: =285
+        ZIndex: =2
+
