@@ -101,6 +101,7 @@
     "UserLocale": "vi-VN"
   },
   "ScreenOrder": [
-    "Note"
+    "Note",
+    "s_budget"
   ]
 }
