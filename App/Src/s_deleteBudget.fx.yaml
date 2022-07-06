@@ -6,3 +6,9 @@ s_deleteBudget As screen:
         Y: =351
         ZIndex: =1
 
+    Button3 As button:
+        Text: ="Button"
+        X: =999
+        Y: =282
+        ZIndex: =2
+
