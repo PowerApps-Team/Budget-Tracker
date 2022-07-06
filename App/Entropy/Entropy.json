@@ -1,25 +1,8 @@
 {
   "ComponentIndexes": {},
-  "ControlUniqueIds": {
-    "App": 1,
-    "btn_Cancel_DeleteBudget": 12,
-    "btn_Cancel_DeleteExpense": 16,
-    "btn_Delete_DeleteBudget": 11,
-    "btn_Delete_DeleteExpense": 15,
-    "Label1": 4,
-    "Label2": 5,
-    "lb_appName": 8,
-    "lb_text_DeleteBudget": 10,
-    "lb_text_DeleteExpense": 14,
-    "Note": 3,
-    "Rectangle1": 7,
-    "s_budget": 6,
-    "s_deleteBudget": 9,
-    "s_DeleteExpense": 13
-  },
+  "ControlUniqueIds": {},
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/06/2022 04:50:54",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -27,49 +10,13 @@
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
-  "OrderDataSource": {
-    "CustomGallerySample": 0
-  },
+  "OrderDataSource": {},
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {
-    "button": 2,
-    "label": 0,
-    "rectangle": 1
-  },
-  "PublishOrderIndices": {
-    "App": 0,
-    "btn_Cancel_DeleteBudget": 11,
-    "btn_Cancel_DeleteExpense": 11,
-    "btn_Delete_DeleteBudget": 10,
-    "btn_Delete_DeleteExpense": 10,
-    "Label1": 3,
-    "Label2": 4,
-    "lb_appName": 7,
-    "lb_text_DeleteBudget": 9,
-    "lb_text_DeleteExpense": 9,
-    "Note": 2,
-    "Rectangle1": 6,
-    "s_budget": 5,
-    "s_deleteBudget": 8,
-    "s_DeleteExpense": 8
-  },
-  "ResourcesJsonIndices": {
-    "Image-SampleImage": 0
-  },
+  "OrderXMLTemplate": {},
+  "PublishOrderIndices": {},
+  "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {},
-  "VolatileProperties": {
-    "AnalysisLoadTime": 0.0284166,
-    "ControlCount": {
-      "button": 4,
-      "label": 5,
-      "rectangle": 1,
-      "screen": 4
-    },
-    "DeserializationLoadTime": 0.1268693,
-    "ErrorCount": 0
-  },
-  "WasLocalDatabaseReferencesEmpty": true
+  "TemplateVersions": {}
 }
