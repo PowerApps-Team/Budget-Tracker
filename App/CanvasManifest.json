@@ -102,6 +102,7 @@
   },
   "ScreenOrder": [
     "Note",
+    "s_budget",
     "s_deleteBudget"
   ]
 }
