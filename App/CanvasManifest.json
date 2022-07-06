@@ -103,6 +103,7 @@
   "ScreenOrder": [
     "Note",
     "s_budget",
-    "s_deleteBudget"
+    "s_deleteBudget",
+    "s_DeleteExpense"
   ]
 }

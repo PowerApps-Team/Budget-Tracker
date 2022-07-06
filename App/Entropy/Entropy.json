@@ -1,23 +1,8 @@
 {
   "ComponentIndexes": {},
-  "ControlUniqueIds": {
-    "App": 1,
-    "btn_Cancel": 12,
-    "btn_Delete": 11,
-    "ic_add": 14,
-    "Label1": 4,
-    "Label2": 5,
-    "lb_appName": 8,
-    "lb_text": 10,
-    "Note": 3,
-    "Rectangle1": 7,
-    "Rectangle2": 13,
-    "s_budget": 6,
-    "s_deleteBudget": 9
-  },
+  "ControlUniqueIds": {},
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/06/2022 04:50:32",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -25,48 +10,13 @@
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
-  "OrderDataSource": {
-    "CustomGallerySample": 0
-  },
+  "OrderDataSource": {},
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
-  "OrderXMLTemplate": {
-    "button": 3,
-    "icon": 2,
-    "label": 0,
-    "rectangle": 1
-  },
-  "PublishOrderIndices": {
-    "App": 0,
-    "btn_Cancel": 8,
-    "btn_Delete": 7,
-    "ic_add": 3,
-    "Label1": 0,
-    "Label2": 1,
-    "lb_appName": 4,
-    "lb_text": 6,
-    "Note": 2,
-    "Rectangle1": 2,
-    "Rectangle2": 5,
-    "s_budget": 5,
-    "s_deleteBudget": 8
-  },
-  "ResourcesJsonIndices": {
-    "Image-SampleImage": 0
-  },
+  "OrderXMLTemplate": {},
+  "PublishOrderIndices": {},
+  "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {},
-  "VolatileProperties": {
-    "AnalysisLoadTime": 0.0393293,
-    "ControlCount": {
-      "button": 2,
-      "label": 4,
-      "rectangle": 1,
-      "screen": 3
-    },
-    "DeserializationLoadTime": 0.547441,
-    "ErrorCount": 0
-  },
-  "WasLocalDatabaseReferencesEmpty": true
+  "TemplateVersions": {}
 }
