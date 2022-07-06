@@ -1,0 +1,8 @@
+Screen4 As screen:
+
+    Label5 As label:
+        Text: ="h"
+        X: =280
+        Y: =235
+        ZIndex: =1
+
