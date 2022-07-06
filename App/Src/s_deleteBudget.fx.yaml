@@ -1,2 +1,8 @@
 s_deleteBudget As screen:
 
+    Button4 As button:
+        Text: ="Nút"
+        X: =150
+        Y: =70
+        ZIndex: =3
+
