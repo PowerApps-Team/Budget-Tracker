@@ -18,3 +18,9 @@ Screen1 As screen:
         Y: =710
         ZIndex: =3
 
+    Button5 As button:
+        Text: ="Nút"
+        X: =95
+        Y: =654
+        ZIndex: =4
+
