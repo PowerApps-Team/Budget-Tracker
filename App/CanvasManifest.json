@@ -102,8 +102,7 @@
   },
   "ScreenOrder": [
     "Note",
-    "cgu",
-    "Screen1ww",
-    "Screen1"
+    "Screen1",
+    "Screen1ww"
   ]
 }
