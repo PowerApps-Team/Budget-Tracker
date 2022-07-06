@@ -1,10 +1,8 @@
 Screen1 As screen:
 
     Button2 As button:
-        Height: =320
-        Text: ="Button"
-        Width: =483
-        X: =246
-        Y: =189
+        Text: ="Nút"
+        X: =95
+        Y: =55
         ZIndex: =1
 
