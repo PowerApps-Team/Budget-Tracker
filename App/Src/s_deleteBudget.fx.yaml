@@ -20,9 +20,10 @@ s_deleteBudget As screen:
 
     lb_text As label:
         Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
         Height: =87
         Size: =22
-        Text: ="Are you sure you want to delete this receipt?"
+        Text: ="Are you sure you want to delete this budget?"
         Width: =612
         X: =390
         Y: =252
