@@ -101,9 +101,6 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Note",
-    "Screen1",
-    "Screen1ww",
-    "Screen2"
+    "Note"
   ]
 }
