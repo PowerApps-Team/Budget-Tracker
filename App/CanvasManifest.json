@@ -101,6 +101,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Note"
+    "Note",
+    "s_deleteBudget"
   ]
 }
