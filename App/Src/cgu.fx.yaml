@@ -1,8 +1,2 @@
 cgu As screen:
 
-    Label3 As label:
-        Text: ="Văn bản"
-        X: =440
-        Y: =200
-        ZIndex: =1
-
