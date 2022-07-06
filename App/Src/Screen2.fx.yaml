@@ -1,7 +1,7 @@
 Screen2 As screen:
 
     Label4 As label:
-        Text: ="Văn bản"
+        Text: ="hoang"
         X: =385
         Y: =290
         ZIndex: =1
