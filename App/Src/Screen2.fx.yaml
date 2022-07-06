@@ -1,10 +1,8 @@
 Screen2 As screen:
 
-    Button1 As button:
-        Height: =440
-        Text: ="Button"
-        Width: =1260
-        X: =40
-        Y: =40
+    Label4 As label:
+        Text: ="Văn bản"
+        X: =385
+        Y: =290
         ZIndex: =1
 
