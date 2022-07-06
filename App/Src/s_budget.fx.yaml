@@ -68,3 +68,9 @@ s_budget As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
+    Button2 As button:
+        Text: ="Nút"
+        X: =900
+        Y: =125
+        ZIndex: =2
+
