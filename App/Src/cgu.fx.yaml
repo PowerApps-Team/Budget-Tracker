@@ -1,4 +1,4 @@
-s_main As screen:
+cgu As screen:
 
     Label3 As label:
         Text: ="Văn bản"
