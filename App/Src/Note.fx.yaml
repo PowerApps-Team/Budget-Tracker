@@ -1,11 +1,13 @@
 Note As screen:
 
     Label1 As label:
-        Height: =48
+        Height: =130
         Size: =20
         Text: |-
-            ="name: đặt theo camelCase"
+            ="name: đặt theo camelCase
+            làm riêng mỗi người 1 màn"
         Width: =380
+        X: =25
         Y: =3
         ZIndex: =1
 
@@ -32,6 +34,7 @@ Note As screen:
             
              "
         Width: =750
-        Y: =66
+        X: =25
+        Y: =180
         ZIndex: =2
 
