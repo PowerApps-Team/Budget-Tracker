@@ -12,3 +12,9 @@ Screen1 As screen:
         Y: =40
         ZIndex: =2
 
+    Button4 As button:
+        Text: ="Nút"
+        X: =1160
+        Y: =710
+        ZIndex: =3
+
