@@ -98,10 +98,11 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "vi-VN"
+    "UserLocale": "en-US"
   },
   "ScreenOrder": [
     "Note",
-    "s_main"
+    "s_main",
+    "Screen1ww"
   ]
 }
