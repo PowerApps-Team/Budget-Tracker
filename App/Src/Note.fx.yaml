@@ -1,0 +1,37 @@
+Note As screen:
+
+    Label1 As label:
+        Height: =48
+        Size: =20
+        Text: |-
+            ="name: đặt theo camelCase"
+        Width: =380
+        Y: =3
+        ZIndex: =1
+
+    Label2 As label:
+        Height: =564
+        Size: =20
+        Text: |-
+            ="tên màn hình: s_name
+            Tên biến: _name
+            tên label: lb_name
+            tên collection: col_name
+            gallery: g_name
+            container: cnt_name
+            form: f_name
+            button: btn_name
+            Image: img_name
+            Icon: ic_name
+            component:cpn_name
+            group: gr_name
+            datepicker: date_name
+            dữ liệu bên share point, data verse: data_name
+            
+            
+            
+             "
+        Width: =750
+        Y: =66
+        ZIndex: =2
+
