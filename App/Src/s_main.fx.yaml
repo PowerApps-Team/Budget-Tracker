@@ -6,3 +6,9 @@ s_main As screen:
         Y: =200
         ZIndex: =1
 
+    Label4 As label:
+        Text: ="Văn bản"
+        X: =603
+        Y: =200
+        ZIndex: =2
+
