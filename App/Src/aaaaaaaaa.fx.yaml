@@ -1,16 +1,2 @@
 aaaaaaaaa As screen:
 
-    Button1 As button:
-        Height: =183
-        Text: ="Button"
-        Width: =543
-        X: =486
-        Y: =177
-        ZIndex: =2
-
-    btzwqwe As button:
-        Text: ="Button"
-        X: =48
-        Y: =69
-        ZIndex: =3
-
