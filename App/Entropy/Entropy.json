@@ -3,6 +3,7 @@
   "ControlUniqueIds": {
     "App": 1,
     "Button1": 15,
+    "Button2": 16,
     "Gallery1": 7,
     "galleryTemplate1": 8,
     "Image1": 9,
@@ -18,7 +19,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/06/2022 04:20:46",
+  "HeaderLastSavedDateTimeUTC": "07/06/2022 04:21:08",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -43,6 +44,7 @@
   "PublishOrderIndices": {
     "App": 0,
     "Button1": 0,
+    "Button2": 0,
     "Gallery1": 6,
     "galleryTemplate1": 7,
     "Image1": 8,
