@@ -102,6 +102,7 @@
   },
   "ScreenOrder": [
     "Note",
+    "s_main",
     "Screen1ww"
   ]
 }
