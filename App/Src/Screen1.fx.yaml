@@ -7,10 +7,8 @@ Screen1 As screen:
         ZIndex: =1
 
     Button3 As button:
-        Height: =168
-        Text: ="Button"
-        Width: =296
-        X: =552
-        Y: =285
+        Text: ="Nút"
+        X: =1160
+        Y: =40
         ZIndex: =2
 
