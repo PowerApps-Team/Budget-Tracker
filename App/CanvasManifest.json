@@ -104,6 +104,7 @@
     "Note",
     "s_budget",
     "s_deleteBudget",
-    "s_DeleteExpense"
+    "s_DeleteExpense",
+    "s_DeleteReceipt"
   ]
 }
