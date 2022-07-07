@@ -12,7 +12,7 @@ Note As screen:
         ZIndex: =1
 
     Label2 As label:
-        Height: =564
+        Height: =611
         Size: =20
         Text: |-
             ="tên màn hình: s_name
@@ -36,6 +36,6 @@ Note As screen:
              "
         Width: =750
         X: =25
-        Y: =180
+        Y: =133
         ZIndex: =2
 
