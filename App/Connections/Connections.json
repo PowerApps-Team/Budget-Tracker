@@ -1,1 +1,39 @@
-{}
+{
+  "d8993887-9e28-4700-99db-e60ab902bbfa": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1578/1.0.1578.2813/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://m365x58945129.sharepoint.com/sites/esdoteam": {
+        "dataSources": {
+          "data_Budgets": {
+            "tableName": "ddd084f2-53fe-44c9-8c1a-bd103bcbc05d"
+          },
+          "data_categories": {
+            "tableName": "13462443-8ee1-445f-8669-d8c59604d34a"
+          },
+          "data_expenses": {
+            "tableName": "f6a134e7-29d5-4efe-a7fd-700a625e7598"
+          },
+          "data_receipts": {
+            "tableName": "e8bb76ab-bc75-49bc-bbd3-3b0d133b8bec"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "data_Budgets",
+      "data_categories",
+      "data_expenses",
+      "data_receipts"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d8993887-9e28-4700-99db-e60ab902bbfa"
+  }
+}

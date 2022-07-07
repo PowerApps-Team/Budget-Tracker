@@ -122,7 +122,7 @@ s_budget As screen:
         Text: ="All budgets"
         VerticalAlign: =Middle
         Width: =374
-        X: =30
+        X: =15
         Y: =97
         ZIndex: =6
 
