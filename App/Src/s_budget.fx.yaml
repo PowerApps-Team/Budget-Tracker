@@ -133,15 +133,17 @@ s_budget As screen:
             ZIndex: =8
 
         Label6 As label:
+            Color: =RGBA(255, 81, 97, 1)
             OnSelect: =Select(Parent)
-            Text: =10
+            Text: =10 & "đ"
             X: =19
             Y: =158
             ZIndex: =9
 
         Label7 As label:
+            Color: =RGBA(102, 162, 9, 1)
             OnSelect: =Select(Parent)
-            Text: =ThisItem.BudgetAmount - Label6.Text
+            Text: =ThisItem.BudgetAmount - Label6.Text & "đ"
             X: =287
             Y: =158
             ZIndex: =10
