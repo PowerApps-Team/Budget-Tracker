@@ -494,13 +494,13 @@ s_addExpense As screen:
 
             Category_Dropdown As dropdown:
                 BorderColor: =RGBA(152, 152, 152, 1)
+                Color: =RGBA(47, 41, 43, 1)
                 ChevronBackground: =RGBA(255,255,255,1)
                 ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
                 ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
                 ChevronFill: =RGBA(225,225,225,1)
                 ChevronHoverBackground: =RGBA(101,128,187,1)
                 ChevronHoverFill: =ColorFade(RGBA(255,255,255,1), -5%)
-                Color: =RGBA(47, 41, 43, 1)
                 DisabledBorderColor: =RGBA(159, 167, 165, 1)
                 DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
                 DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
