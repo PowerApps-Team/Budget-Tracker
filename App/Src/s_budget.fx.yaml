@@ -7,7 +7,8 @@ s_budget As screen:
         ZIndex: =1
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        Fill: =RGBA(163, 179, 214, .1)
+        Fill: |
+            =RGBA(163, 179, 214, .1)
         Height: =570
         Items: =data_Budgets
         Layout: =Layout.Vertical
