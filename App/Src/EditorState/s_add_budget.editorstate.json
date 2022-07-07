@@ -352,7 +352,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ic_addBudget",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -541,7 +541,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label3",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -817,7 +817,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label3_1",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1107,7 +1107,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_appName_1",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1442,7 +1442,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_budgetToAdd",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1752,7 +1752,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_remainingToAdd",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2062,7 +2062,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_spentToAdd",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2275,7 +2275,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle1_1",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2407,7 +2407,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle2_1",
-      "ParentIndex": 8,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2971,7 +2971,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2_7",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4148,7 +4148,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tinput_budgetTitle",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
