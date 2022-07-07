@@ -320,19 +320,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.Camera1.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.Camera.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.Camera1.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.Camera.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.Camera1"
+                "type": "s_addExpense.Camera"
               }
             }
           ],
@@ -530,19 +530,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.g_imgageList.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.g_imgageList.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.Gallery2"
+                "type": "s_addExpense.g_imgageList"
               }
             }
           ],
@@ -560,19 +560,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.Gallery2.TabIndex"
+                  "fullyQualifiedName": "s_addExpense.g_imgageList.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.Gallery2.TabIndex",
+                  "fullyQualifiedName": "s_addExpense.g_imgageList.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "s_addExpense",
-                "type": "s_addExpense.Gallery2"
+                "type": "s_addExpense.g_imgageList"
               }
             }
           ],
