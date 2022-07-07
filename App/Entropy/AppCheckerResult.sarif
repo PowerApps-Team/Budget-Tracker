@@ -14,6 +14,42 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown.Items"
+                }
+              ],
+              "properties": {
+                "member": "Items",
+                "module": "s_addExpense",
+                "type": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charOffset": 12,
+                  "snippet": {
+                    "text": ""
+                  }
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-WarnNoUsableFields",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "s_budget.lb_totalBudgetAllBuget.Text"
                 }
               ],
@@ -47,7 +83,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -77,7 +113,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -107,7 +143,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -137,7 +173,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -167,7 +203,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -197,7 +233,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -227,7 +263,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -257,7 +293,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -287,7 +323,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -317,7 +353,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -347,24 +383,24 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.DataCardValue8.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard12.Value6.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.DataCardValue8"
+                "type": "s_addExpense.f_NewExpense.DataCard12.Value6"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.DataCardValue8.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard12.Value6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -377,24 +413,24 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.Category_DataCard1.DataCardValue7.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard13.Value7.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.Category_DataCard1.DataCardValue7"
+                "type": "s_addExpense.f_NewExpense.DataCard13.Value7"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.Category_DataCard1.DataCardValue7.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard13.Value7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -407,24 +443,24 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6"
+                "type": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -437,24 +473,24 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard15.Value9.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5"
+                "type": "s_addExpense.f_NewExpense.DataCard15.Value9"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard15.Value9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -467,24 +503,24 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.ExpensesAmount_DataCard1.DataCardValue4.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard16.Value10.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.ExpensesAmount_DataCard1.DataCardValue4"
+                "type": "s_addExpense.f_NewExpense.DataCard16.Value10"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.ExpensesAmount_DataCard1.DataCardValue4.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard16.Value10.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -497,24 +533,24 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.Title_DataCard2.DataCardValue3.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard17.Value11.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.Title_DataCard2.DataCardValue3"
+                "type": "s_addExpense.f_NewExpense.DataCard17.Value11"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.Title_DataCard2.DataCardValue3.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard17.Value11.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -527,7 +563,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -557,7 +593,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -587,7 +623,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -617,7 +653,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -647,7 +683,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -677,7 +713,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -707,7 +743,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -737,7 +773,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -767,7 +803,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -797,7 +833,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -827,7 +863,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -857,7 +893,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -887,7 +923,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -917,7 +953,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -947,7 +983,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -977,7 +1013,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1007,7 +1043,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1037,7 +1073,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1067,7 +1103,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1097,7 +1133,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1127,7 +1163,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1157,126 +1193,6 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "s_budget.Circle1.AccessibleLabel"
-                }
-              ],
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "s_budget",
-                "type": "s_budget.Circle1"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_budget.Circle1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "s_budget.Circle1.TabIndex"
-                }
-              ],
-              "properties": {
-                "member": "TabIndex",
-                "module": "s_budget",
-                "type": "s_budget.Circle1"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_budget.Circle1.TabIndex",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "s_budget.ic_addExpense.AccessibleLabel"
-                }
-              ],
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "s_budget",
-                "type": "s_budget.ic_addExpense"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_budget.ic_addExpense.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "s_budget.ic_addExpense.TabIndex"
-                }
-              ],
-              "properties": {
-                "member": "TabIndex",
-                "module": "s_budget",
-                "type": "s_budget.ic_addExpense"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_budget.ic_addExpense.TabIndex",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
         }
       ],
@@ -1285,6 +1201,20 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
+            {
+              "id": "app-WarnNoUsableFields",
+              "messageStrings": {
+                "issue": {
+                  "text": "Warning: The columns produced by this rule are all nested tables and/or records, however the property expects at least some columns of simple values (such as text, or numbers)."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
             {
               "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
               "messageStrings": {
