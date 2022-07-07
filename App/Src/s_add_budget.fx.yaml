@@ -194,6 +194,7 @@ s_add_budget As screen:
         Height: =50
         OnSelect: |-
             =SubmitForm(f_add_budgets);
+            //Patch(data_expenseByBudget;Defaults(data_expenseByBudget);{BudgetId:LookUp(data_Budgets;BudgetId=DataCardValue1.Text).BudgetId});;
             Back();
             ResetForm(f_add_budgets);
         RadiusBottomLeft: =0

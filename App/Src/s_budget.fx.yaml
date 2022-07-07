@@ -139,6 +139,75 @@ s_budget As screen:
             Y: =177
             ZIndex: =22
 
+    "g_expenses As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        DisabledBorderColor: =g_expenses.BorderColor
+        DisabledFill: =g_expenses.Fill
+        Height: =237
+        HoverBorderColor: =g_expenses.BorderColor
+        HoverFill: =g_expenses.Fill
+        Items: =data_expenses
+        Layout: =Layout.Vertical
+        PressedBorderColor: =g_expenses.BorderColor
+        PressedFill: =g_expenses.Fill
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        Width: =353
+        X: =500
+        Y: =531
+        ZIndex: =1
+
+        Title1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.ExpenId
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title1.Y + Title1.Height + 4
+            ZIndex: =2
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="Xem chi tiết mục"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
     Rectangle1 As rectangle:
         Fill: =RGBA(0, 164, 228, 1)
         Height: =78
@@ -420,122 +489,6 @@ s_budget As screen:
         X: =447
         Y: =480
         ZIndex: =17
-
-    g_expenses As gallery.galleryVertical:
-        DisabledBorderColor: =g_expenses.BorderColor
-        DisabledFill: =g_expenses.Fill
-        Height: =239.4568867457333
-        HoverBorderColor: =g_expenses.BorderColor
-        HoverFill: =g_expenses.Fill
-        Items: |
-            =//Filter(ExpensesCollect;BudgetTitle = Gallery1.Selected.BudgetTitle && BudgetId=Gallery1.Selected.BudgetId)
-        Layout: =Layout.Vertical
-        PressedBorderColor: =g_expenses.BorderColor
-        PressedFill: =g_expenses.Fill
-        ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =46.9199206479688
-        Width: =366
-        X: =500
-        Y: =529
-        ZIndex: =18
-
-        lb_expenseName As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: |
-                =If(ThisItem.IsSelected, RGBA(0,0,0,1), RGBA(92,92,92,1))
-            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-            Height: =46.9199206479688
-            HoverBorderColor: =lb_expenseName.BorderColor
-            HoverColor: =lb_expenseName.Color
-            HoverFill: =lb_expenseName.Fill
-            PaddingBottom: =0
-            PaddingLeft: =10
-            PaddingRight: =0
-            PaddingTop: =0
-            PressedBorderColor: =lb_expenseName.BorderColor
-            PressedColor: =lb_expenseName.Color
-            PressedFill: =lb_expenseName.Fill
-            Size: =14
-            Text: =//ThisItem.ExpenseName
-            VerticalAlign: =Middle
-            Width: =177
-            Wrap: =false
-            X: =5.52966101694915
-            ZIndex: =2
-
-        lb_budgetOfExpense As label:
-            Align: =Right
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(255,81,97,1)
-            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-            FontWeight: =Semibold
-            Height: =45
-            HoverBorderColor: =lb_budgetOfExpense.BorderColor
-            HoverColor: =lb_budgetOfExpense.Color
-            HoverFill: =lb_budgetOfExpense.Fill
-            PressedBorderColor: =lb_budgetOfExpense.BorderColor
-            PressedColor: =lb_budgetOfExpense.Color
-            PressedFill: =lb_budgetOfExpense.Fill
-            Size: =14
-            Text: |-
-                =
-                //If( Text(Value(ThisItem.Expense)) = "0"; "$";  Text(Value(ThisItem.Expense);"$#,##"))
-            VerticalAlign: =Middle
-            Width: =90.98281867252797
-            Wrap: =false
-            X: =234
-            ZIndex: =4
-
-        ic_atttached As icon.DocumentwithContent:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Color: =RGBA(0,0,0,.7)
-            DisabledBorderColor: =RGBA(56, 56, 56, 1)
-            DisabledColor: =RGBA(193, 193, 193, 0.95)
-            DisabledFill: =ic_atttached.Fill
-            Height: =20
-            HoverBorderColor: =ColorFade(ic_atttached.BorderColor, 20%)
-            HoverColor: =ColorFade(ic_atttached.Color, 20%)
-            HoverFill: =ic_atttached.Fill
-            Icon: =Icon.DocumentWithContent
-            PressedBorderColor: =ColorFade(ic_atttached.BorderColor, -20%)
-            PressedColor: =ColorFade(ic_atttached.Color, -20%)
-            PressedFill: =ic_atttached.Fill
-            TabIndex: =0
-            Visible: =//CountRows(Filter(Receipts;ExpenseId = ThisItem.Id))>0 
-            Width: =20
-            X: =196.397
-            Y: =13.265306122448983
-            ZIndex: =5
-
-        gr_deletaExpense As group:
-            Height: =36
-            Width: =36
-            X: =321.525423728813
-            Y: =5.10204081632653
-            ZIndex: =6
-
-            ic_deleteExpense As icon.Trash:
-                BorderColor: =RGBA(0, 0, 0, 1)
-                Color: =RGBA(0,0,0,1)
-                DisabledBorderColor: =RGBA(56, 56, 56, 1)
-                DisabledColor: =RGBA(193, 193, 193, 0.95)
-                DisabledFill: =ic_deleteExpense.Fill
-                Height: =20
-                HoverBorderColor: =ColorFade(ic_deleteExpense.BorderColor, 20%)
-                HoverColor: =ColorFade(ic_deleteExpense.Color, 20%)
-                HoverFill: =ic_deleteExpense.Fill
-                Icon: =Icon.Trash
-                OnSelect: =//Navigate(DeleteExpense;ScreenTransition.Fade)
-                PressedBorderColor: =ColorFade(ic_deleteExpense.BorderColor, -20%)
-                PressedColor: =ColorFade(ic_deleteExpense.Color, -20%)
-                PressedFill: =ic_deleteExpense.Fill
-                TabIndex: =0
-                Visible: =If(ThisItem.IsSelected,true,false)
-                Width: =20
-                X: =329.525423728813
-                Y: =13.102040816326528
-                ZIndex: =8
 
     g_attechedList As gallery.galleryVertical:
         DisabledBorderColor: =g_attechedList.BorderColor

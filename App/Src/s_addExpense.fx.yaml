@@ -28,7 +28,7 @@ s_addExpense As screen:
             Fill: =RGBA(0,164,228,228)
             Height: =80
             HoverFill: =Rectangle4_2.Fill
-            OnSelect: =Back()
+            OnSelect: =Back();ResetForm(f_NewExpense)
             PressedFill: =Rectangle4_2.Fill
             TabIndex: =0
             Width: =97
@@ -81,7 +81,7 @@ s_addExpense As screen:
         HoverBorderColor: =btn_saveExpense.BorderColor
         HoverColor: =btn_saveExpense.Color
         HoverFill: =btn_saveExpense.Fill
-        OnSelect: =
+        OnSelect: =SubmitForm(f_NewExpense)
         PressedBorderColor: =btn_saveExpense.BorderColor
         PressedColor: =btn_saveExpense.Color
         PressedFill: =ColorFade(btn_saveExpense.Fill, 10%)
@@ -185,7 +185,7 @@ s_addExpense As screen:
         NumberOfColumns: =1
         OnSuccess: |-
             =
-            false
+            Navigate(s_budget,None);ResetForm(f_NewExpense)
             
             
             //Navigate(BudgetScreen;ScreenTransition.Fade);;ResetForm(FormNewExpense)
@@ -356,13 +356,18 @@ s_addExpense As screen:
 
             DataCardValue5 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: |-
+                    =
+                    LookUp(data_expenses,BudgetId.Value=g_allBudget.Selected.ID).BudgetId
+                    
+                    //LookUp(data_Budgets;ID=g_allBudget.Selected.ID)
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@data_expenses].BudgetId)
+                IsSearchable: =false
+                Items: =Choices(data_expenses.BudgetId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(data_expenses.BudgetId,DataCardValue5.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -422,7 +427,9 @@ s_addExpense As screen:
 
             DataCardValue6 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: |-
+                    =//LookUp(data_Budgets;ID=g_allBudget.Selected.ID)
+                    LookUp(data_expenses,BudgetId.Value=g_allBudget.Selected.ID).BudgetTitle
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Items: =Choices([@data_expenses].BudgetTitle)

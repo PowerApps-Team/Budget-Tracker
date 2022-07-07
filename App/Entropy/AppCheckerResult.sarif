@@ -14,35 +14,81 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown.Items"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5.DefaultSelectedItems"
                 }
               ],
               "properties": {
-                "member": "Items",
+                "member": "DefaultSelectedItems",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown"
+                "type": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown.Items",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5.DefaultSelectedItems",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charOffset": 12,
+                  "charLength": 1,
+                  "charOffset": 37,
                   "snippet": {
-                    "text": ""
+                    "text": "="
                   }
                 }
               }
             }
           ],
           "message": {
+            "arguments": [
+              "Text",
+              "Number"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-WarnNoUsableFields",
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6.DefaultSelectedItems"
+                }
+              ],
+              "properties": {
+                "member": "DefaultSelectedItems",
+                "module": "s_addExpense",
+                "type": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6.DefaultSelectedItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 86,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Number"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
           "ruleIndex": 0
         },
         {
@@ -390,17 +436,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard12.Value6.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.Title_DataCard2.DataCardValue3.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.DataCard12.Value6"
+                "type": "s_addExpense.f_NewExpense.Title_DataCard2.DataCardValue3"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard12.Value6.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.Title_DataCard2.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -420,17 +466,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard13.Value7.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.ExpensesAmount_DataCard1.DataCardValue4.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.DataCard13.Value7"
+                "type": "s_addExpense.f_NewExpense.ExpensesAmount_DataCard1.DataCardValue4"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard13.Value7.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.ExpensesAmount_DataCard1.DataCardValue4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -450,17 +496,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown"
+                "type": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard14.Category_Dropdown.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -480,17 +526,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard15.Value9.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.DataCard15.Value9"
+                "type": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard15.Value9.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -510,17 +556,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard16.Value10.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.Category_DataCard1.DataCardValue7.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.DataCard16.Value10"
+                "type": "s_addExpense.f_NewExpense.Category_DataCard1.DataCardValue7"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard16.Value10.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.Category_DataCard1.DataCardValue7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -540,17 +586,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard17.Value11.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.DataCardValue8.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.DataCard17.Value11"
+                "type": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.DataCardValue8"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.DataCard17.Value11.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.DataCardValue8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -1080,6 +1126,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "s_budget.Circle1.AccessibleLabel"
+                }
+              ],
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "s_budget",
+                "type": "s_budget.Circle1"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_budget.Circle1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_budget.Circle1.TabIndex"
+                }
+              ],
+              "properties": {
+                "member": "TabIndex",
+                "module": "s_budget",
+                "type": "s_budget.Circle1"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_budget.Circle1.TabIndex",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "s_budget.g_expenses.AccessibleLabel"
                 }
               ],
@@ -1140,17 +1246,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_budget.g_expenses.ic_deleteExpense.AccessibleLabel"
+                  "fullyQualifiedName": "s_budget.ic_addExpense.AccessibleLabel"
                 }
               ],
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "s_budget",
-                "type": "s_budget.g_expenses.ic_deleteExpense"
+                "type": "s_budget.ic_addExpense"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_budget.g_expenses.ic_deleteExpense.AccessibleLabel",
+                  "fullyQualifiedName": "s_budget.ic_addExpense.AccessibleLabel",
                   "relativeAddress": 0
                 }
               }
@@ -1170,17 +1276,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_budget.g_expenses.ic_atttached.AccessibleLabel"
+                  "fullyQualifiedName": "s_budget.ic_addExpense.TabIndex"
                 }
               ],
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "s_budget",
-                "type": "s_budget.g_expenses.ic_atttached"
+                "type": "s_budget.ic_addExpense"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_budget.g_expenses.ic_atttached.AccessibleLabel",
+                  "fullyQualifiedName": "s_budget.ic_addExpense.TabIndex",
                   "relativeAddress": 0
                 }
               }
@@ -1192,8 +1298,68 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5.DefaultSelectedItems"
+                }
+              ],
+              "properties": {
+                "member": "DefaultSelectedItems",
+                "module": "s_addExpense",
+                "type": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetId_DataCard1.DataCardValue5.DefaultSelectedItems",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6.DefaultSelectedItems"
+                }
+              ],
+              "properties": {
+                "member": "DefaultSelectedItems",
+                "module": "s_addExpense",
+                "type": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.BudgetTitle_DataCard1.DataCardValue6.DefaultSelectedItems",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 5
         }
       ],
       "tool": {
@@ -1202,14 +1368,18 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-WarnNoUsableFields",
+              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
               "messageStrings": {
                 "issue": {
-                  "text": "Warning: The columns produced by this rule are all nested tables and/or records, however the property expects at least some columns of simple values (such as text, or numbers)."
+                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
                 }
               },
               "properties": {
                 "componentType": "app",
+                "howToFix": [
+                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
+                  "If you’re comparing records or tables, the field or column types must match exactly."
+                ],
                 "level": "Medium",
                 "primaryCategory": "formula",
                 "whyFix": ""
@@ -1283,6 +1453,23 @@
                 "level": "Medium",
                 "primaryCategory": "accessibility",
                 "whyFix": "If the focus isn't visible, people who don't use a mouse won't be able to see it when they're interacting with the app."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Tải trễ không hiệu quả"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Sử dụng các biến, bộ sưu tập và ngữ cảnh dẫn hướng để chia sẻ trạng thái trên nhiều màn hình thay vào đó."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Điều khiển tham chiếu tới điều khiển trên các màn hình khác có thể làm chậm hoạt động tải và dẫn hướng ứng dụng. Thực hiện việc này có thể buộc ứng dụng tải các màn hình còn lại ngay lập tức, thay vì chờ đến khi người dùng dẫn hướng đến màn hình đó."
               }
             }
           ],
