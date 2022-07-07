@@ -108,6 +108,7 @@
     "s_deleteBudget",
     "s_DeleteExpense",
     "s_DeleteReceipt",
-    "s_viewReceipt"
+    "s_viewReceipt",
+    "s_addExpense"
   ]
 }
