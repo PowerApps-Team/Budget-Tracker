@@ -1,11 +1,5 @@
 s_budget As screen:
 
-    Rectangle1 As rectangle:
-        Fill: =RGBA(0, 164, 228, 1)
-        Height: =78
-        Width: =1366
-        ZIndex: =1
-
     "g_allBudget As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         Fill: |
             =RGBA(163, 179, 214, .1)
@@ -145,6 +139,12 @@ s_budget As screen:
             Y: =177
             ZIndex: =22
 
+    Rectangle1 As rectangle:
+        Fill: =RGBA(0, 164, 228, 1)
+        Height: =78
+        Width: =1366
+        ZIndex: =2
+
     lb_appName As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
@@ -154,14 +154,14 @@ s_budget As screen:
         Width: =287
         X: =App.Width/2 -Self.Width/2
         Y: =26
-        ZIndex: =2
+        ZIndex: =3
 
     Rectangle2 As rectangle:
         Fill: =RGBA(229, 234, 243, 1)
         Height: =120 
         Width: =App.Width
         Y: =78
-        ZIndex: =3
+        ZIndex: =4
 
     ic_add As icon.Add:
         Color: =RGBA(255, 255, 255, 1)
@@ -174,7 +174,7 @@ s_budget As screen:
         Width: =50
         X: =Rectangle1.Width - Self.Width -10
         Y: =Rectangle1.Height/2-Self.Height/2
-        ZIndex: =4
+        ZIndex: =5
 
     lb_bigTitle As label:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -400,7 +400,7 @@ s_budget As screen:
         Width: =517
         X: =460
         Y: =209
-        ZIndex: =18
+        ZIndex: =16
 
     lb_columnExpense As label:
         Align: =Left
@@ -418,15 +418,8 @@ s_budget As screen:
         Text: ="Expenses"
         Width: =183.776509396515
         X: =447
-        Y: =486
-        ZIndex: =19
-
-    ic_addExpense As icon.Add:
-        Height: =57
-        Icon: =Icon.Add
-        X: =866
         Y: =480
-        ZIndex: =20
+        ZIndex: =17
 
     g_expenses As gallery.galleryVertical:
         DisabledBorderColor: =g_expenses.BorderColor
@@ -445,7 +438,7 @@ s_budget As screen:
         Width: =366
         X: =500
         Y: =529
-        ZIndex: =21
+        ZIndex: =18
 
         lb_expenseName As label:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -560,7 +553,7 @@ s_budget As screen:
         Width: =262
         X: =1075
         Y: =269
-        ZIndex: =22
+        ZIndex: =19
 
         ic_attached As icon.DocumentwithContent:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -604,4 +597,33 @@ s_budget As screen:
             Wrap: =false
             X: =41.6220808219117
             ZIndex: =3
+
+    gr_addExpense As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =22
+
+        Circle1 As circle:
+            BorderColor: =RGBA(179, 179, 179, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            Height: =58
+            HoverFill: =RGBA(179, 179, 179, 1)
+            OnSelect: =NewForm(f_NewExpense);Navigate(s_addExpense,None)
+            Width: =58
+            X: =863
+            Y: =471
+            ZIndex: =20
+
+        ic_addExpense As icon.Add:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =26
+            HoverColor: =RGBA(0, 18, 107, 1)
+            Icon: =Icon.Add
+            OnSelect: =NewForm(f_NewExpense);Navigate(s_addExpense,None)
+            Width: =38
+            X: =873
+            Y: =487
+            ZIndex: =21
 
