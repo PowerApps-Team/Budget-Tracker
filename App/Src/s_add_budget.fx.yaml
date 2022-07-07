@@ -224,7 +224,7 @@ s_add_budget As screen:
         RadiusTopRight: =0
         Width: =500
         X: =433
-        Y: =436
+        Y: =431
         ZIndex: =15
 
     Label3 As label:
@@ -236,7 +236,9 @@ s_add_budget As screen:
 
     Label3_1 As label:
         Color: =RGBA(92, 92, 92, 1)
+        Height: =25
         Text: ="* Budget amount"
+        Width: =186
         X: =404
         Y: =396
         ZIndex: =17
