@@ -1,0 +1,133 @@
+s_viewReceipt As screen:
+
+    Rectangle1_3 As rectangle:
+        BorderColor: =RGBA(0, 0, 255, 1)
+        DisabledFill: =Rectangle1_3.Fill
+        Fill: =RGBA(0,164,228,228)
+        Height: =60
+        HoverFill: =Rectangle1_3.Fill
+        PressedFill: =Rectangle1_3.Fill
+        TabIndex: =0
+        Width: =1365
+        X: =1
+        ZIndex: =1
+
+    gr_deleteReceipt As group:
+        Height: =60
+        Width: =60
+        X: =-924
+        Y: =40
+        ZIndex: =1
+
+        Rectangle4_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 255, 1)
+            DisabledFill: =Rectangle4_4.Fill
+            Fill: =RGBA(0,164,228,228)
+            Height: =60
+            HoverFill: =Rectangle4_4.Fill
+            OnSelect: |-
+                =//Navigate(DeleteReceipt;ScreenTransition.Fade;{Receiptrecord:Receiptrecord})
+            PressedFill: =Rectangle4_4.Fill
+            TabIndex: =0
+            Width: =60
+            X: =1306
+            ZIndex: =2
+
+        icon4 As icon.Trash:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledColor: =RGBA(193, 193, 193, 0.95)
+            DisabledFill: =icon4.Fill
+            Height: =32
+            HoverBorderColor: =ColorFade(icon4.BorderColor, 20%)
+            HoverColor: =ColorFade(icon4.Color, 20%)
+            HoverFill: =icon4.Fill
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =//Navigate(DeleteReceipt;ScreenTransition.Fade;{Receiptrecord:Receiptrecord})
+            PressedBorderColor: =ColorFade(icon4.BorderColor, -20%)
+            PressedColor: =ColorFade(icon4.Color, -20%)
+            PressedFill: =icon4.Fill
+            TabIndex: =0
+            Width: =32
+            X: =1320
+            Y: =14
+            ZIndex: =3
+
+    lb_viewReceipt As label:
+        Align: =Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Height: =60
+        HoverBorderColor: =lb_viewReceipt.BorderColor
+        HoverColor: =lb_viewReceipt.Color
+        HoverFill: =lb_viewReceipt.Fill
+        PressedBorderColor: =lb_viewReceipt.BorderColor
+        PressedColor: =lb_viewReceipt.Color
+        PressedFill: =lb_viewReceipt.Fill
+        Size: =20
+        Text: ="View receipt"
+        VerticalAlign: =Middle
+        Width: =1024
+        X: =171
+        ZIndex: =4
+
+    gr_receiptBack As group:
+        Height: =60
+        Width: =60
+        X: =40
+        Y: =40
+        ZIndex: =5
+
+        Rectangle4_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 255, 1)
+            DisabledFill: =Rectangle4_3.Fill
+            Fill: =RGBA(0,164,228,228)
+            Height: =60
+            HoverFill: =Rectangle4_3.Fill
+            OnSelect: =//Navigate(BudgetScreen;ScreenTransition.Fade)
+            PressedFill: =Rectangle4_3.Fill
+            TabIndex: =0
+            Width: =60
+            ZIndex: =5
+
+        ic_receiptBack As icon.ChevronLeft:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledColor: =RGBA(193, 193, 193, 0.95)
+            DisabledFill: =ic_receiptBack.Fill
+            Height: =30
+            HoverBorderColor: =ColorFade(ic_receiptBack.BorderColor, 20%)
+            HoverColor: =ColorFade(ic_receiptBack.Color, 20%)
+            HoverFill: =ic_receiptBack.Fill
+            Icon: =Icon.ChevronLeft
+            OnSelect: =//Navigate(BudgetScreen;ScreenTransition.Fade)
+            PressedBorderColor: =ColorFade(ic_receiptBack.BorderColor, -20%)
+            PressedColor: =ColorFade(ic_receiptBack.Color, -20%)
+            PressedFill: =ic_receiptBack.Fill
+            TabIndex: =0
+            Width: =30
+            X: =15
+            Y: =16
+            ZIndex: =6
+
+    img_receipt As image:
+        ApplyEXIFOrientation: =false
+        AutoDisableOnSelect: =false
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(159, 167, 165, 1)
+        DisabledFill: =RGBA(193, 193, 193, 0.95)
+        Height: =708
+        HoverBorderColor: =ColorFade(img_receipt.BorderColor, 20%)
+        HoverFill: =ColorFade(img_receipt.Fill, 20%)
+        Image: =//Receiptrecord.ReceiptImage
+        PressedBorderColor: =ColorFade(img_receipt.BorderColor, -20%)
+        PressedFill: =ColorFade(img_receipt.Fill, -20%)
+        Width: =1024
+        X: =145
+        Y: =60
+        ZIndex: =7
+
