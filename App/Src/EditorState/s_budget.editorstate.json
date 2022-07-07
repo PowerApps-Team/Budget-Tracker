@@ -39,7 +39,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "g_all",
-      "ParentIndex": 11,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -560,7 +560,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery5",
-      "ParentIndex": 16,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -972,7 +972,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ic_add",
-      "ParentIndex": 1,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1131,7 +1131,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1",
-      "ParentIndex": 17,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2386,7 +2386,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_appName",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2633,7 +2633,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryNextIcon.ID%",
       "Name": "NextArrow1",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2828,7 +2828,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%PieChart.ID%",
       "Name": "PieChart1",
-      "ParentIndex": 15,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2967,7 +2967,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle1",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3099,7 +3099,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle2",
-      "ParentIndex": 3,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4316,7 +4316,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGallerySubtitle.ID%",
       "Name": "Subtitle1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4611,7 +4611,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2",
-      "ParentIndex": 4,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4907,7 +4907,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2_1",
-      "ParentIndex": 5,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5227,7 +5227,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2_14",
-      "ParentIndex": 14,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5533,7 +5533,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2_2",
-      "ParentIndex": 6,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6153,7 +6153,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2_3",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6458,7 +6458,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2_4",
-      "ParentIndex": 8,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6768,7 +6768,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2_5",
-      "ParentIndex": 9,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7078,7 +7078,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextBox2_6",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8334,7 +8334,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2",
-      "ParentIndex": 13,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8638,7 +8638,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_1",
-      "ParentIndex": 12,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
