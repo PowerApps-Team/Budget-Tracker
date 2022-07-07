@@ -37,12 +37,12 @@ s_budget As screen:
         Y: =Rectangle1.Height/2-Self.Height/2
         ZIndex: =4
 
-    "g_all As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+    "g_allBudget As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =569
         Items: =data_Budgets
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =218
+        TemplateSize: =224
         Width: =442
         Y: =198
         ZIndex: =5
@@ -54,9 +54,8 @@ s_budget As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
-        Title1 As label:
-            AutoHeight: =true
-            Height: =Self.Size * 1.8
+        lb_budgetName As label:
+            Height: =32
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -69,8 +68,8 @@ s_budget As screen:
             Y: =16
             ZIndex: =2
 
-        Subtitle1 As label:
-            Height: =Self.Size * 1.8
+        lb_budgetValue As label:
+            Height: =32
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -78,26 +77,10 @@ s_budget As screen:
             PaddingTop: =0
             Text: =ThisItem.BudgetAmount
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title1.Width
+            Width: =302
             X: =19
-            Y: =86
+            Y: =76
             ZIndex: =3
-
-        NextArrow1 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Height: =60
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="Xem chi tiết mục"
-            Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
 
         Separator1 As rectangle:
             Height: =1
@@ -106,60 +89,60 @@ s_budget As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
-        Label3 As label:
+        lb_budgetTitle As label:
             Height: =28
             OnSelect: =Select(Parent)
             Text: ="Budgeted"
             X: =19
-            Y: =50
+            Y: =48
             ZIndex: =6
 
-        Label5 As label:
+        lb_spentTitle As label:
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
             Size: =10
             Text: ="Spent"
             X: =19
-            Y: =127
+            Y: =115
             ZIndex: =7
 
-        Label5_1 As label:
+        lb_remainingTitle As label:
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
             Size: =10
             Text: ="Remaining"
-            X: =287
-            Y: =127
+            X: =275
+            Y: =118
             ZIndex: =8
 
-        Label6 As label:
+        lb_spentValue As label:
             Color: =RGBA(255, 81, 97, 1)
             OnSelect: =Select(Parent)
             Text: =10 & "đ"
             X: =19
-            Y: =158
+            Y: =142
             ZIndex: =9
 
-        Label7 As label:
+        lb_remainingValue As label:
             Color: =RGBA(102, 162, 9, 1)
             OnSelect: =Select(Parent)
-            Text: =ThisItem.BudgetAmount - Label6.Text & "đ"
-            X: =287
-            Y: =158
+            Text: =ThisItem.BudgetAmount - lb_spentValue.Text & "đ"
+            X: =275
+            Y: =145
             ZIndex: =10
 
-    TextBox2 As label:
+    lb_bigTitle As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(19,113,155,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =62
-        HoverBorderColor: =TextBox2.BorderColor
-        HoverColor: =TextBox2.Color
-        HoverFill: =TextBox2.Fill
-        PressedBorderColor: =TextBox2.BorderColor
-        PressedColor: =TextBox2.Color
-        PressedFill: =TextBox2.Fill
+        HoverBorderColor: =lb_bigTitle.BorderColor
+        HoverColor: =lb_bigTitle.Color
+        HoverFill: =lb_bigTitle.Fill
+        PressedBorderColor: =lb_bigTitle.BorderColor
+        PressedColor: =lb_bigTitle.Color
+        PressedFill: =lb_bigTitle.Fill
         Size: =20
         Text: ="All budgets"
         VerticalAlign: =Middle
@@ -168,18 +151,18 @@ s_budget As screen:
         Y: =97
         ZIndex: =6
 
-    TextBox2_4 As label:
+    lb_totalBudgetAllBuget As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(0,0,0,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =45.982207824661
-        HoverBorderColor: =TextBox2_4.BorderColor
-        HoverColor: =TextBox2_4.Color
-        HoverFill: =TextBox2_4.Fill
-        PressedBorderColor: =TextBox2_4.BorderColor
-        PressedColor: =TextBox2_4.Color
-        PressedFill: =TextBox2_4.Fill
+        HoverBorderColor: =lb_totalBudgetAllBuget.BorderColor
+        HoverColor: =lb_totalBudgetAllBuget.Color
+        HoverFill: =lb_totalBudgetAllBuget.Fill
+        PressedBorderColor: =lb_totalBudgetAllBuget.BorderColor
+        PressedColor: =lb_totalBudgetAllBuget.Color
+        PressedFill: =lb_totalBudgetAllBuget.Fill
         Size: =18
         Text: |-
             =//If(Text(Coalesce(Sum(BudgetsCollect;BudgetAmount);0);"[$-en-US]$#,##")="$";
@@ -193,18 +176,18 @@ s_budget As screen:
         Y: =117
         ZIndex: =7
 
-    TextBox2_5 As label:
+    lb_totalSpentAllBuget As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(255,81,97,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =44.81625688811599
-        HoverBorderColor: =TextBox2_5.BorderColor
-        HoverColor: =TextBox2_5.Color
-        HoverFill: =TextBox2_5.Fill
-        PressedBorderColor: =TextBox2_5.BorderColor
-        PressedColor: =TextBox2_5.Color
-        PressedFill: =TextBox2_5.Fill
+        HoverBorderColor: =lb_totalSpentAllBuget.BorderColor
+        HoverColor: =lb_totalSpentAllBuget.Color
+        HoverFill: =lb_totalSpentAllBuget.Fill
+        PressedBorderColor: =lb_totalSpentAllBuget.BorderColor
+        PressedColor: =lb_totalSpentAllBuget.Color
+        PressedFill: =lb_totalSpentAllBuget.Fill
         Size: =18
         Text: |-
             =//If(Text(Coalesce(Sum(Gallery1.AllItems;SpendText.Text);0);"[$-en-US]$#,##") ="$";
@@ -218,18 +201,18 @@ s_budget As screen:
         Y: =117
         ZIndex: =8
 
-    TextBox2_6 As label:
+    lb_totalRemainingAllBuget As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(102,162,9,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =44.91805329530101
-        HoverBorderColor: =TextBox2_6.BorderColor
-        HoverColor: =TextBox2_6.Color
-        HoverFill: =TextBox2_6.Fill
-        PressedBorderColor: =TextBox2_6.BorderColor
-        PressedColor: =TextBox2_6.Color
-        PressedFill: =TextBox2_6.Fill
+        HoverBorderColor: =lb_totalRemainingAllBuget.BorderColor
+        HoverColor: =lb_totalRemainingAllBuget.Color
+        HoverFill: =lb_totalRemainingAllBuget.Fill
+        PressedBorderColor: =lb_totalRemainingAllBuget.BorderColor
+        PressedColor: =lb_totalRemainingAllBuget.Color
+        PressedFill: =lb_totalRemainingAllBuget.Fill
         Size: =18
         Text: |-
             =//If(Text(Coalesce(Sum(Gallery1.AllItems;RemainingText.Text);0);"[$-en-US]$#,##") ="$";
@@ -243,18 +226,18 @@ s_budget As screen:
         Y: =117
         ZIndex: =9
 
-    TextBox2_1 As label:
+    lb_totalBudget As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(92,91,86,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =32.6327345309381
-        HoverBorderColor: =TextBox2_1.BorderColor
-        HoverColor: =TextBox2_1.Color
-        HoverFill: =TextBox2_1.Fill
-        PressedBorderColor: =TextBox2_1.BorderColor
-        PressedColor: =TextBox2_1.Color
-        PressedFill: =TextBox2_1.Fill
+        HoverBorderColor: =lb_totalBudget.BorderColor
+        HoverColor: =lb_totalBudget.Color
+        HoverFill: =lb_totalBudget.Fill
+        PressedBorderColor: =lb_totalBudget.BorderColor
+        PressedColor: =lb_totalBudget.Color
+        PressedFill: =lb_totalBudget.Fill
         Size: =12
         Text: ="Budgeted"
         VerticalAlign: =VerticalAlign.Top
@@ -263,18 +246,18 @@ s_budget As screen:
         Y: =97
         ZIndex: =10
 
-    TextBox2_2 As label:
+    lb_totalSpent As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(92,91,86,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =33.0339321357282
-        HoverBorderColor: =TextBox2_2.BorderColor
-        HoverColor: =TextBox2_2.Color
-        HoverFill: =TextBox2_2.Fill
-        PressedBorderColor: =TextBox2_2.BorderColor
-        PressedColor: =TextBox2_2.Color
-        PressedFill: =TextBox2_2.Fill
+        HoverBorderColor: =lb_totalSpent.BorderColor
+        HoverColor: =lb_totalSpent.Color
+        HoverFill: =lb_totalSpent.Fill
+        PressedBorderColor: =lb_totalSpent.BorderColor
+        PressedColor: =lb_totalSpent.Color
+        PressedFill: =lb_totalSpent.Fill
         Size: =12
         Text: ="Spent"
         VerticalAlign: =VerticalAlign.Top
@@ -283,18 +266,18 @@ s_budget As screen:
         Y: =97
         ZIndex: =11
 
-    TextBox2_3 As label:
+    lb_totalRemaining As label:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(92,91,86,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =33.1976047904192
-        HoverBorderColor: =TextBox2_3.BorderColor
-        HoverColor: =TextBox2_3.Color
-        HoverFill: =TextBox2_3.Fill
-        PressedBorderColor: =TextBox2_3.BorderColor
-        PressedColor: =TextBox2_3.Color
-        PressedFill: =TextBox2_3.Fill
+        HoverBorderColor: =lb_totalRemaining.BorderColor
+        HoverColor: =lb_totalRemaining.Color
+        HoverFill: =lb_totalRemaining.Fill
+        PressedBorderColor: =lb_totalRemaining.BorderColor
+        PressedColor: =lb_totalRemaining.Color
+        PressedFill: =lb_totalRemaining.Fill
         Size: =12
         Text: ="Remaining"
         VerticalAlign: =VerticalAlign.Top
@@ -303,18 +286,18 @@ s_budget As screen:
         Y: =97
         ZIndex: =12
 
-    Title2_1 As label:
+    lb_titleAttachedColumn As label:
         Align: =Left
         Color: =RGBA(25,113,156,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =52
-        HoverBorderColor: =Title2_1.BorderColor
-        HoverColor: =Title2_1.Color
-        HoverFill: =Title2_1.Fill
-        PressedBorderColor: =Title2_1.BorderColor
-        PressedColor: =Title2_1.Color
-        PressedFill: =Title2_1.Fill
+        HoverBorderColor: =lb_titleAttachedColumn.BorderColor
+        HoverColor: =lb_titleAttachedColumn.Color
+        HoverFill: =lb_titleAttachedColumn.Fill
+        PressedBorderColor: =lb_titleAttachedColumn.BorderColor
+        PressedColor: =lb_titleAttachedColumn.Color
+        PressedFill: =lb_titleAttachedColumn.Fill
         Size: =18
         Text: ="Attached receipts"
         Width: =267.86248779296875
@@ -322,18 +305,18 @@ s_budget As screen:
         Y: =198
         ZIndex: =13
 
-    Title2 As label:
+    lb_titleTotalSpent As label:
         Align: =Left
         Color: =RGBA(25,113,156,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =51
-        HoverBorderColor: =Title2.BorderColor
-        HoverColor: =Title2.Color
-        HoverFill: =Title2.Fill
-        PressedBorderColor: =Title2.BorderColor
-        PressedColor: =Title2.Color
-        PressedFill: =Title2.Fill
+        HoverBorderColor: =lb_titleTotalSpent.BorderColor
+        HoverColor: =lb_titleTotalSpent.Color
+        HoverFill: =lb_titleTotalSpent.Fill
+        PressedBorderColor: =lb_titleTotalSpent.BorderColor
+        PressedColor: =lb_titleTotalSpent.Color
+        PressedFill: =lb_titleTotalSpent.Fill
         Size: =18
         Text: ="Total spent"
         Width: =183.776509396515
@@ -341,32 +324,32 @@ s_budget As screen:
         Y: =199
         ZIndex: =14
 
-    TextBox2_14 As label:
+    lb_totalExpenseOfABudget As label:
         Align: =Right
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(255,81,97,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =43.829978454805
-        HoverBorderColor: =TextBox2_14.BorderColor
-        HoverColor: =TextBox2_14.Color
-        HoverFill: =TextBox2_14.Fill
-        PressedBorderColor: =TextBox2_14.BorderColor
-        PressedColor: =TextBox2_14.Color
-        PressedFill: =TextBox2_14.Fill
+        HoverBorderColor: =lb_totalExpenseOfABudget.BorderColor
+        HoverColor: =lb_totalExpenseOfABudget.Color
+        HoverFill: =lb_totalExpenseOfABudget.Fill
+        PressedBorderColor: =lb_totalExpenseOfABudget.BorderColor
+        PressedColor: =lb_totalExpenseOfABudget.Color
+        PressedFill: =lb_totalExpenseOfABudget.Fill
         Size: =18
         Text: |-
             =//If(Text(Coalesce(Sum(Filter(ExpensesCollect;BudgetTitle = Gallery1.Selected.BudgetTitle && BudgetId=Gallery1.Selected.BudgetId); Value(Expense));0);"[$-en-US]$#,##")="$";"$0";Text(Coalesce(Sum(Filter(ExpensesCollect;BudgetId = Gallery1.Selected.BudgetId); Value(Expense));0);"[$-en-US]$#,##"))
             "1950"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =If(TextBox2_14.Text="0",false,true)
+        Visible: =If(lb_totalExpenseOfABudget.Text="0",false,true)
         Width: =121.666666666667
         Wrap: =false
         X: =853
         Y: =202
         ZIndex: =15
 
-    PieChart1 As pieChart:
+    PieChart As pieChart:
         Height: =272
         Items: =PieChartSample
         Width: =517
@@ -374,18 +357,18 @@ s_budget As screen:
         Y: =209
         ZIndex: =18
 
-    Title2_4 As label:
+    lb_columnExpense As label:
         Align: =Left
         Color: =RGBA(25,113,156,1)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         FontWeight: =Semibold
         Height: =51
-        HoverBorderColor: =Title2_4.BorderColor
-        HoverColor: =Title2_4.Color
-        HoverFill: =Title2_4.Fill
-        PressedBorderColor: =Title2_4.BorderColor
-        PressedColor: =Title2_4.Color
-        PressedFill: =Title2_4.Fill
+        HoverBorderColor: =lb_columnExpense.BorderColor
+        HoverColor: =lb_columnExpense.Color
+        HoverFill: =lb_columnExpense.Fill
+        PressedBorderColor: =lb_columnExpense.BorderColor
+        PressedColor: =lb_columnExpense.Color
+        PressedFill: =lb_columnExpense.Fill
         Size: =18
         Text: ="Expenses"
         Width: =183.776509396515
@@ -393,24 +376,24 @@ s_budget As screen:
         Y: =486
         ZIndex: =19
 
-    Icon1 As icon.Add:
+    ic_addExpense As icon.Add:
         Height: =57
         Icon: =Icon.Add
         X: =866
         Y: =480
         ZIndex: =20
 
-    Gallery4 As gallery.galleryVertical:
-        DisabledBorderColor: =Gallery4.BorderColor
-        DisabledFill: =Gallery4.Fill
+    g_expenses As gallery.galleryVertical:
+        DisabledBorderColor: =g_expenses.BorderColor
+        DisabledFill: =g_expenses.Fill
         Height: =239.4568867457333
-        HoverBorderColor: =Gallery4.BorderColor
-        HoverFill: =Gallery4.Fill
+        HoverBorderColor: =g_expenses.BorderColor
+        HoverFill: =g_expenses.Fill
         Items: |
             =//Filter(ExpensesCollect;BudgetTitle = Gallery1.Selected.BudgetTitle && BudgetId=Gallery1.Selected.BudgetId)
         Layout: =Layout.Vertical
-        PressedBorderColor: =Gallery4.BorderColor
-        PressedFill: =Gallery4.Fill
+        PressedBorderColor: =g_expenses.BorderColor
+        PressedFill: =g_expenses.Fill
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =46.9199206479688
@@ -431,22 +414,22 @@ s_budget As screen:
             Width: =366
             ZIndex: =1
 
-        TextBox6 As label:
+        lb_expenseName As label:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: |
                 =If(ThisItem.IsSelected, RGBA(0,0,0,1), RGBA(92,92,92,1))
             DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
             Height: =46.9199206479688
-            HoverBorderColor: =TextBox6.BorderColor
-            HoverColor: =TextBox6.Color
-            HoverFill: =TextBox6.Fill
+            HoverBorderColor: =lb_expenseName.BorderColor
+            HoverColor: =lb_expenseName.Color
+            HoverFill: =lb_expenseName.Fill
             PaddingBottom: =0
             PaddingLeft: =10
             PaddingRight: =0
             PaddingTop: =0
-            PressedBorderColor: =TextBox6.BorderColor
-            PressedColor: =TextBox6.Color
-            PressedFill: =TextBox6.Fill
+            PressedBorderColor: =lb_expenseName.BorderColor
+            PressedColor: =lb_expenseName.Color
+            PressedFill: =lb_expenseName.Fill
             Size: =14
             Text: =//ThisItem.ExpenseName
             VerticalAlign: =Middle
@@ -467,19 +450,19 @@ s_budget As screen:
             Y: =44.7890725627522
             ZIndex: =3
 
-        TextBox2_22 As label:
+        lb_budgetOfExpense As label:
             Align: =Right
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(255,81,97,1)
             DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
             FontWeight: =Semibold
             Height: =45
-            HoverBorderColor: =TextBox2_22.BorderColor
-            HoverColor: =TextBox2_22.Color
-            HoverFill: =TextBox2_22.Fill
-            PressedBorderColor: =TextBox2_22.BorderColor
-            PressedColor: =TextBox2_22.Color
-            PressedFill: =TextBox2_22.Fill
+            HoverBorderColor: =lb_budgetOfExpense.BorderColor
+            HoverColor: =lb_budgetOfExpense.Color
+            HoverFill: =lb_budgetOfExpense.Fill
+            PressedBorderColor: =lb_budgetOfExpense.BorderColor
+            PressedColor: =lb_budgetOfExpense.Color
+            PressedFill: =lb_budgetOfExpense.Fill
             Size: =14
             Text: |-
                 =
@@ -490,20 +473,20 @@ s_budget As screen:
             X: =234
             ZIndex: =4
 
-        icon5_1 As icon.DocumentwithContent:
+        ic_atttached As icon.DocumentwithContent:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(0,0,0,.7)
             DisabledBorderColor: =RGBA(56, 56, 56, 1)
             DisabledColor: =RGBA(193, 193, 193, 0.95)
-            DisabledFill: =icon5_1.Fill
+            DisabledFill: =ic_atttached.Fill
             Height: =20
-            HoverBorderColor: =ColorFade(icon5_1.BorderColor, 20%)
-            HoverColor: =ColorFade(icon5_1.Color, 20%)
-            HoverFill: =icon5_1.Fill
+            HoverBorderColor: =ColorFade(ic_atttached.BorderColor, 20%)
+            HoverColor: =ColorFade(ic_atttached.Color, 20%)
+            HoverFill: =ic_atttached.Fill
             Icon: =Icon.DocumentWithContent
-            PressedBorderColor: =ColorFade(icon5_1.BorderColor, -20%)
-            PressedColor: =ColorFade(icon5_1.Color, -20%)
-            PressedFill: =icon5_1.Fill
+            PressedBorderColor: =ColorFade(ic_atttached.BorderColor, -20%)
+            PressedColor: =ColorFade(ic_atttached.Color, -20%)
+            PressedFill: =ic_atttached.Fill
             TabIndex: =0
             Visible: =//CountRows(Filter(Receipts;ExpenseId = ThisItem.Id))>0 
             Width: =20
@@ -511,7 +494,7 @@ s_budget As screen:
             Y: =13.265306122448983
             ZIndex: =5
 
-        Group5 As group:
+        gr_deletaExpense As group:
             Height: =36
             Width: =36
             X: =321.525423728813
@@ -533,21 +516,21 @@ s_budget As screen:
                 Y: =5.102040816326529
                 ZIndex: =7
 
-            icon6 As icon.Trash:
+            ic_deleteExpense As icon.Trash:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 Color: =RGBA(0,0,0,1)
                 DisabledBorderColor: =RGBA(56, 56, 56, 1)
                 DisabledColor: =RGBA(193, 193, 193, 0.95)
-                DisabledFill: =icon6.Fill
+                DisabledFill: =ic_deleteExpense.Fill
                 Height: =20
-                HoverBorderColor: =ColorFade(icon6.BorderColor, 20%)
-                HoverColor: =ColorFade(icon6.Color, 20%)
-                HoverFill: =icon6.Fill
+                HoverBorderColor: =ColorFade(ic_deleteExpense.BorderColor, 20%)
+                HoverColor: =ColorFade(ic_deleteExpense.Color, 20%)
+                HoverFill: =ic_deleteExpense.Fill
                 Icon: =Icon.Trash
                 OnSelect: =//Navigate(DeleteExpense;ScreenTransition.Fade)
-                PressedBorderColor: =ColorFade(icon6.BorderColor, -20%)
-                PressedColor: =ColorFade(icon6.Color, -20%)
-                PressedFill: =icon6.Fill
+                PressedBorderColor: =ColorFade(ic_deleteExpense.BorderColor, -20%)
+                PressedColor: =ColorFade(ic_deleteExpense.Color, -20%)
+                PressedFill: =ic_deleteExpense.Fill
                 TabIndex: =0
                 Visible: =If(ThisItem.IsSelected,true,false)
                 Width: =20
@@ -555,16 +538,16 @@ s_budget As screen:
                 Y: =13.102040816326528
                 ZIndex: =8
 
-    Gallery5 As gallery.galleryVertical:
-        DisabledBorderColor: =Gallery5.BorderColor
-        DisabledFill: =Gallery5.Fill
+    g_attechedList As gallery.galleryVertical:
+        DisabledBorderColor: =g_attechedList.BorderColor
+        DisabledFill: =g_attechedList.Fill
         Height: =499.1536209833472
-        HoverBorderColor: =Gallery5.BorderColor
-        HoverFill: =Gallery5.Fill
+        HoverBorderColor: =g_attechedList.BorderColor
+        HoverFill: =g_attechedList.Fill
         Items: =//Filter(ReceiptsCollect;ExpenseId =  Gallery4.Selected.Id)
         Layout: =Layout.Vertical
-        PressedBorderColor: =Gallery5.BorderColor
-        PressedFill: =Gallery5.Fill
+        PressedBorderColor: =g_attechedList.BorderColor
+        PressedFill: =g_attechedList.Fill
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =38.605681271063986
@@ -585,43 +568,43 @@ s_budget As screen:
             Width: =262
             ZIndex: =1
 
-        icon5 As icon.DocumentwithContent:
+        ic_attached As icon.DocumentwithContent:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(0,0,0,.7)
             DisabledBorderColor: =RGBA(56, 56, 56, 1)
             DisabledColor: =RGBA(193, 193, 193, 0.95)
-            DisabledFill: =icon5.Fill
+            DisabledFill: =ic_attached.Fill
             Height: =20
-            HoverBorderColor: =ColorFade(icon5.BorderColor, 20%)
-            HoverColor: =ColorFade(icon5.Color, 20%)
-            HoverFill: =icon5.Fill
+            HoverBorderColor: =ColorFade(ic_attached.BorderColor, 20%)
+            HoverColor: =ColorFade(ic_attached.Color, 20%)
+            HoverFill: =ic_attached.Fill
             Icon: =Icon.DocumentWithContent
-            PressedBorderColor: =ColorFade(icon5.BorderColor, -20%)
-            PressedColor: =ColorFade(icon5.Color, -20%)
-            PressedFill: =icon5.Fill
+            PressedBorderColor: =ColorFade(ic_attached.BorderColor, -20%)
+            PressedColor: =ColorFade(ic_attached.Color, -20%)
+            PressedFill: =ic_attached.Fill
             TabIndex: =0
             Width: =20
             X: =14.037037037037023
             Y: =9.061224489795918
             ZIndex: =2
 
-        TextBox8 As label:
+        lb_attachedName As label:
             BorderColor: =RGBA(0, 0, 0, 1)
             Color: =RGBA(0,0,0,1)
             DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
             Height: =37
-            HoverBorderColor: =TextBox8.BorderColor
-            HoverColor: =TextBox8.Color
-            HoverFill: =TextBox8.Fill
+            HoverBorderColor: =lb_attachedName.BorderColor
+            HoverColor: =lb_attachedName.Color
+            HoverFill: =lb_attachedName.Fill
             OnSelect: |-
                 =//Navigate(ReceiptScreen;ScreenTransition.Fade;{Receiptrecord:ThisItem})
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            PressedBorderColor: =TextBox8.BorderColor
-            PressedColor: =TextBox8.Color
-            PressedFill: =TextBox8.Fill
+            PressedBorderColor: =lb_attachedName.BorderColor
+            PressedColor: =lb_attachedName.Color
+            PressedFill: =lb_attachedName.Fill
             Text: =//ThisItem.ReceiptId
             Width: =220.3779191780883
             Wrap: =false
