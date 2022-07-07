@@ -28,9 +28,10 @@ s_add_budget As screen:
         Color: =RGBA(255, 255, 255, 1)
         Height: |
             =50
-        Icon: =Icon.Add
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
         Width: =50
-        X: =Rectangle1_1.Width - Self.Width -10
+        X: =10
         Y: =Rectangle1_1.Height/2-Self.Height/2
         ZIndex: =4
 
@@ -191,6 +192,10 @@ s_add_budget As screen:
 
     btn_saveBudget As button:
         Height: =50
+        OnSelect: |-
+            =SubmitForm(f_add_budgets);
+            Back();
+            ResetForm(f_add_budgets);
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -201,45 +206,148 @@ s_add_budget As screen:
         Y: =533
         ZIndex: =13
 
-    tinput_budgetTitle As text:
-        BorderColor: =RGBA(152, 152, 152, 1)
-        Default: =
-        Height: =44
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Width: =500
-        X: =433
-        Y: =329
-        ZIndex: =14
+    f_add_budgets As form:
+        DataSource: =data_Budgets
+        Height: =265
+        NumberOfColumns: =1
+        Width: =571
+        X: =399
+        Y: =268
+        ZIndex: =18
 
-    tinput_budgetAmount As text:
-        BorderColor: =RGBA(152, 152, 152, 1)
-        Default: =
-        Height: =44
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Width: =500
-        X: =433
-        Y: =431
-        ZIndex: =15
+        Title_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@data_Budgets],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@data_Budgets], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue1.Text
+            Width: =571
+            X: =0
+            Y: =0
+            ZIndex: =19
 
-    Label3 As label:
-        Color: =RGBA(92, 92, 92, 1)
-        Text: ="* Budget title"
-        X: =404
-        Y: =289
-        ZIndex: =16
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Budget title"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
 
-    Label3_1 As label:
-        Color: =RGBA(92, 92, 92, 1)
-        Height: =25
-        Text: ="* Budget amount"
-        Width: =186
-        X: =404
-        Y: =396
-        ZIndex: =17
+            DataCardValue1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =50
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1.Y
+                ZIndex: =4
+
+        BudgetAmount_DataCard1 As typedDataCard.numberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="BudgetAmount"
+            Default: =ThisItem.BudgetAmount
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@data_Budgets],DataSourceInfo.DisplayName,"BudgetAmount")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue2.Text)
+            Width: =571
+            X: =0
+            Y: =1
+            ZIndex: =19
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =" *   Budget Amount"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =50
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                ZIndex: =2
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey2.Y
+                ZIndex: =4
 

@@ -29,6 +29,9 @@ s_budget As screen:
         Height: |
             =50
         Icon: =Icon.Add
+        OnSelect: |-
+            =NewForm(f_add_budgets);
+            Navigate(s_add_budget)
         Width: =50
         X: =Rectangle1.Width - Self.Width -10
         Y: =Rectangle1.Height/2-Self.Height/2
