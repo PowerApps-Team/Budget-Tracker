@@ -219,7 +219,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btn_retake",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1292,7 +1292,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Camera",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4133,7 +4133,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "f_NewExpense",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5098,7 +5098,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "img_expense",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7308,7 +7308,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_tapAnywhere",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
