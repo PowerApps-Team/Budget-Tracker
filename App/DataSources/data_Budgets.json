@@ -1,0 +1,44 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-06-02T17:40:23.4780000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Tệp đính kèm",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "Tên tệp với phần mở rộng",
+      "{FullPath}": "Đường dẫn đầy đủ",
+      "{HasAttachments}": "Có tệp đính kèm",
+      "{Identifier}": "Mã định danh",
+      "{IsFolder}": "Là_thư_mực",
+      "{Link}": "Liên kết đến mục",
+      "{ModerationComment}": "Chú thích liên quan đến trạng thái phê duyệt nội dung của mục danh sách này",
+      "{ModerationStatus}": "Trạng thái phê duyệt nội dung",
+      "{Name}": "Tên",
+      "{Path}": "Đường dẫn thư mục",
+      "{Thumbnail}": "Thumbnail",
+      "{TriggerWindowEndToken}": "Kích hoạt Cửa sổ Kết thúc Mã thông báo",
+      "{TriggerWindowStartToken}": "Kích hoạt Cửa sổ Bắt đầu Mã thông báo",
+      "{VersionNumber}": "Số phiên bản",
+      "Author": "Created By",
+      "Author#Claims": "Created By Claims",
+      "BudgetAmount": "BudgetAmount",
+      "ComplianceAssetId": "Compliance Asset Id",
+      "Created": "Created",
+      "Editor": "Modified By",
+      "Editor#Claims": "Modified By Claims",
+      "ID": "BudgetId",
+      "Modified": "Modified",
+      "Title": "Title"
+    },
+    "DatasetName": "https://m365x58945129.sharepoint.com/sites/esdoteam",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "data_Budgets",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
