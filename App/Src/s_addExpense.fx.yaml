@@ -1,16 +1,18 @@
 s_addExpense As screen:
+    OnVisible: |-
+        =UpdateContext({CameraVisible:true})
 
     Rectangle12 As rectangle:
         BorderColor: =RGBA(0, 0, 255, 1)
         DisabledFill: =Rectangle12.Fill
         Fill: =RGBA(250, 250, 250, 1)
-        Height: =637
+        Height: =614
         HoverFill: =Rectangle12.Fill
         PressedFill: =Rectangle12.Fill
         TabIndex: =0
-        Width: =923
-        X: =443
-        Y: =41
+        Width: =798
+        X: =565
+        Y: =80
         ZIndex: =1
 
     gr_addExpenseBack As group:
@@ -31,7 +33,7 @@ s_addExpense As screen:
             TabIndex: =0
             Width: =97
             X: =3
-            ZIndex: =8
+            ZIndex: =7
 
         ic_aackAddExpense As icon.ChevronLeft:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -52,7 +54,7 @@ s_addExpense As screen:
             Width: =48
             X: =27
             Y: =20
-            ZIndex: =9
+            ZIndex: =8
 
     Rectangle1_2 As rectangle:
         BorderColor: =RGBA(0, 0, 255, 1)
@@ -66,31 +68,31 @@ s_addExpense As screen:
         X: =3
         ZIndex: =2
 
-    Button1_1 As button:
+    btn_saveExpense As button:
         AutoDisableOnSelect: =false
-        BorderColor: =ColorFade(Button1_1.Fill, -15%)
+        BorderColor: =ColorFade(btn_saveExpense.Fill, -15%)
         BorderThickness: =0
         Color: =RGBA(255,255,255,1)
-        DisabledBorderColor: =ColorFade(Button1_1.BorderColor, 70%)
+        DisabledBorderColor: =ColorFade(btn_saveExpense.BorderColor, 70%)
         DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
         DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
         Fill: =RGBA(20,93,137,1)
-        Height: =84
-        HoverBorderColor: =Button1_1.BorderColor
-        HoverColor: =Button1_1.Color
-        HoverFill: =Button1_1.Fill
+        Height: =74
+        HoverBorderColor: =btn_saveExpense.BorderColor
+        HoverColor: =btn_saveExpense.Color
+        HoverFill: =btn_saveExpense.Fill
         OnSelect: =
-        PressedBorderColor: =Button1_1.BorderColor
-        PressedColor: =Button1_1.Color
-        PressedFill: =ColorFade(Button1_1.Fill, 10%)
+        PressedBorderColor: =btn_saveExpense.BorderColor
+        PressedColor: =btn_saveExpense.Color
+        PressedFill: =ColorFade(btn_saveExpense.Fill, 10%)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Save"
-        Width: =700
+        Width: =562
         X: =3
-        Y: =684
+        Y: =694
         ZIndex: =3
 
     lb_topAddExpense As label:
@@ -112,88 +114,67 @@ s_addExpense As screen:
         X: =3
         ZIndex: =4
 
-    Camera1 As camera:
+    Camera As camera:
         Camera: =0
-        Height: =688
+        Height: =528
         OnSelect: |-
             =UpdateContext({CameraVisible:false,ImageVisible:true})
         Visible: =CameraVisible
-        Width: =923
-        X: =443
-        Y: =80
+        Width: =801
+        X: =562
+        Y: =113
         ZIndex: =5
 
-    TextBox4 As label:
-        Align: =Center
-        BorderColor: =RGBA(0, 0, 0, 1)
-        Color: =RGBA(255, 255, 255, .7)
-        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-        Fill: =RGBA(0, 0, 0, .8)
-        Height: =90
-        HoverBorderColor: =TextBox4.BorderColor
-        HoverColor: =TextBox4.Color
-        HoverFill: =TextBox4.Fill
-        PressedBorderColor: =TextBox4.BorderColor
-        PressedColor: =TextBox4.Color
-        PressedFill: =TextBox4.Fill
-        Text: ="Tap anywhere above to take a photo"
-        VerticalAlign: =Middle
-        Visible: =CameraVisible
-        Width: =923
-        X: =443
-        Y: =678
-        ZIndex: =6
-
-    Gallery2 As gallery.imageGalleryHorizontal:
-        DisabledBorderColor: =Gallery2.BorderColor
-        DisabledFill: =Gallery2.Fill
+    g_imgageList As gallery.imageGalleryHorizontal:
+        DisabledBorderColor: =g_imgageList.BorderColor
+        DisabledFill: =g_imgageList.Fill
         Height: =206
-        HoverBorderColor: =Gallery2.BorderColor
-        HoverFill: =Gallery2.Fill
+        HoverBorderColor: =g_imgageList.BorderColor
+        HoverFill: =g_imgageList.Fill
         Items: =//Filter(ReceiptsCollect; ExpenseId = varExpenseId + 1)
-        PressedBorderColor: =Gallery2.BorderColor
-        PressedFill: =Gallery2.Fill
+        PressedBorderColor: =g_imgageList.BorderColor
+        PressedFill: =g_imgageList.Fill
         TemplatePadding: =0
         TemplateSize: =396
-        Width: =577
-        X: =32
-        Y: =483
-        ZIndex: =7
+        Width: =500
+        X: =37
+        Y: =448
+        ZIndex: =6
 
-        Image2 As image:
+        img_inListImg As image:
             ApplyEXIFOrientation: =false
             AutoDisableOnSelect: =false
             BorderColor: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(159, 167, 165, 1)
             DisabledFill: =RGBA(193, 193, 193, 0.95)
             Height: =89.9999999999999
-            HoverBorderColor: =ColorFade(Image2.BorderColor, 20%)
-            HoverFill: =ColorFade(Image2.Fill, 20%)
+            HoverBorderColor: =ColorFade(img_inListImg.BorderColor, 20%)
+            HoverFill: =ColorFade(img_inListImg.Fill, 20%)
             Image: =//ThisItem.ReceiptImage
             ImagePosition: =ImagePosition.Fill
-            PressedBorderColor: =ColorFade(Image2.BorderColor, -20%)
-            PressedFill: =ColorFade(Image2.Fill, -20%)
+            PressedBorderColor: =ColorFade(img_inListImg.BorderColor, -20%)
+            PressedFill: =ColorFade(img_inListImg.Fill, -20%)
             Width: =90
             ZIndex: =1
 
-    Image1_1 As image:
+    img_expense As image:
         ApplyEXIFOrientation: =false
         AutoDisableOnSelect: =false
         BorderColor: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(159, 167, 165, 1)
         DisabledFill: =RGBA(193, 193, 193, 0.95)
-        Height: =676
-        HoverBorderColor: =ColorFade(Image1_1.BorderColor, 20%)
-        HoverFill: =ColorFade(Image1_1.Fill, 20%)
-        Image: =Camera1.Photo
+        Height: =541
+        HoverBorderColor: =ColorFade(img_expense.BorderColor, 20%)
+        HoverFill: =ColorFade(img_expense.Fill, 20%)
+        Image: =Camera.Photo
         ImagePosition: =Fill
-        PressedBorderColor: =ColorFade(Image1_1.BorderColor, -20%)
-        PressedFill: =ColorFade(Image1_1.Fill, -20%)
+        PressedBorderColor: =ColorFade(img_expense.BorderColor, -20%)
+        PressedFill: =ColorFade(img_expense.Fill, -20%)
         Visible: =ImageVisible
-        Width: =883
-        X: =457
-        Y: =92
-        ZIndex: =10
+        Width: =711
+        X: =598
+        Y: =113
+        ZIndex: =9
 
     f_NewExpense As form:
         AcceptsFocus: =false
@@ -208,10 +189,10 @@ s_addExpense As screen:
             
             
             //Navigate(BudgetScreen;ScreenTransition.Fade);;ResetForm(FormNewExpense)
-        Width: =425
+        Width: =562
         X: =3
         Y: =113
-        ZIndex: =13
+        ZIndex: =11
 
         DataCard12 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(152, 152, 152, 1)
@@ -224,7 +205,7 @@ s_addExpense As screen:
             Height: =108
             Required: =true
             Update: =If(Len(Value6.Text)>0,Value6.Text)
-            Width: =425
+            Width: =562
             WidthFit: =false
             X: =0
             Y: =0
@@ -333,7 +314,7 @@ s_addExpense As screen:
             Height: =108
             Required: =true
             Update: =If(Len(Value7.Text)>0&&Value(Value7.Text)>0,Value(Value7.Text))
-            Width: =425
+            Width: =562
             WidthFit: =false
             X: =0
             Y: =1
@@ -442,7 +423,7 @@ s_addExpense As screen:
             Height: =108
             Required: =false
             Update: =Category_Dropdown.SelectedText.Value
-            Width: =425
+            Width: =562
             WidthFit: =false
             X: =0
             Y: =2
@@ -514,7 +495,7 @@ s_addExpense As screen:
                 PressedFill: =RGBA(20,93,137,1)
                 SelectionColor: =RGBA(255,255,255,1)
                 SelectionFill: =RGBA(20,93,137,1)
-                Width: =379
+                Width: =500
                 X: =30
                 Y: =30.85714285714284
                 ZIndex: =5
@@ -531,7 +512,7 @@ s_addExpense As screen:
             Required: =false
             Update: =//Max(Expenses;Id)+1
             Visible: =false
-            Width: =425
+            Width: =562
             WidthFit: =false
             X: =0
             Y: =3
@@ -641,7 +622,7 @@ s_addExpense As screen:
             Required: =false
             Update: =//Gallery1.Selected.BudgetId
             Visible: =false
-            Width: =425
+            Width: =562
             WidthFit: =false
             X: =0
             Y: =4
@@ -751,7 +732,7 @@ s_addExpense As screen:
             Required: =false
             Update: =//Gallery1.Selected.BudgetTitle
             Visible: =false
-            Width: =425
+            Width: =562
             WidthFit: =false
             X: =0
             Y: =5
@@ -849,70 +830,6 @@ s_addExpense As screen:
                 Y: =Key11.Y
                 ZIndex: =4
 
-    Group7 As group:
-        Height: =50
-        Width: =554
-        X: =40
-        Y: =40
-        ZIndex: =13
-
-        Button1_7 As button:
-            AutoDisableOnSelect: =false
-            BorderColor: =ColorFade(Button1_7.Fill, -15%)
-            BorderThickness: =0
-            Color: =RGBA(255,255,255,1)
-            DisabledBorderColor: =ColorFade(Button1_7.BorderColor, 70%)
-            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-            DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
-            Fill: =RGBA(14,59,86,1)
-            Height: =63
-            HoverBorderColor: =Button1_7.BorderColor
-            HoverColor: =Button1_7.Color
-            HoverFill: =Button1_7.Fill
-            OnSelect: |-
-                =UpdateContext({CameraVisible:true,ImageVisible:false})
-            PressedBorderColor: =Button1_7.BorderColor
-            PressedColor: =Button1_7.Color
-            PressedFill: =ColorFade(Button1_7.Fill, 10%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Text: ="Retake"
-            Visible: =ImageVisible
-            Width: =366
-            X: =635
-            Y: =694
-            ZIndex: =11
-
-        Button1_8 As button:
-            AutoDisableOnSelect: =false
-            BorderColor: =ColorFade(Button1_8.Fill, -15%)
-            BorderThickness: =0
-            Color: =RGBA(255,255,255,1)
-            DisabledBorderColor: =ColorFade(Button1_8.BorderColor, 70%)
-            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-            DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
-            Fill: =RGBA(25,94,137,1)
-            Height: =63
-            HoverBorderColor: =ColorFade(Button1_8.BorderColor, 20%)
-            HoverColor: =Button1_8.Color
-            HoverFill: =Button1_8.Fill
-            OnSelect: =
-            PressedBorderColor: =Button1_8.Fill
-            PressedColor: =Button1_8.Color
-            PressedFill: =ColorFade(Button1_8.Fill, 10%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Text: ="Use"
-            Visible: =ImageVisible
-            Width: =365
-            X: =1001
-            Y: =694
-            ZIndex: =12
-
     lb_titleBudget As label:
         Align: =Left
         Color: =RGBA(25,113,156,1)
@@ -935,5 +852,90 @@ s_addExpense As screen:
         Wrap: =false
         X: =3
         Y: =80
+        ZIndex: =12
+
+    gr_btnTakeImg As group:
+        Height: =50
+        Width: =554
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        btn_retake As button:
+            AutoDisableOnSelect: =false
+            BorderColor: =ColorFade(btn_retake.Fill, -15%)
+            BorderThickness: =0
+            Color: =RGBA(255,255,255,1)
+            DisabledBorderColor: =ColorFade(btn_retake.BorderColor, 70%)
+            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+            DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+            Fill: =RGBA(14,59,86,1)
+            Height: =74
+            HoverBorderColor: =btn_retake.BorderColor
+            HoverColor: =btn_retake.Color
+            HoverFill: =btn_retake.Fill
+            OnSelect: |-
+                =UpdateContext({CameraVisible:true,ImageVisible:false})
+            PressedBorderColor: =btn_retake.BorderColor
+            PressedColor: =btn_retake.Color
+            PressedFill: =ColorFade(btn_retake.Fill, 10%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Retake"
+            Visible: =ImageVisible
+            Width: =400
+            X: =565
+            Y: =694
+            ZIndex: =10
+
+        btn_useImage As button:
+            AutoDisableOnSelect: =false
+            BorderColor: =ColorFade(btn_useImage.Fill, -15%)
+            BorderThickness: =0
+            Color: =RGBA(255,255,255,1)
+            DisabledBorderColor: =ColorFade(btn_useImage.BorderColor, 70%)
+            DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+            DisabledFill: =ColorFade(RGBA(159, 167, 165, 1), 50%)
+            Fill: =RGBA(25,94,137,1)
+            Height: =74
+            HoverBorderColor: =ColorFade(btn_useImage.BorderColor, 20%)
+            HoverColor: =btn_useImage.Color
+            HoverFill: =btn_useImage.Fill
+            OnSelect: =
+            PressedBorderColor: =btn_useImage.Fill
+            PressedColor: =btn_useImage.Color
+            PressedFill: =ColorFade(btn_useImage.Fill, 10%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Use"
+            Visible: =ImageVisible
+            Width: =400
+            X: =966
+            Y: =694
+            ZIndex: =13
+
+    lb_tapAnywhere As label:
+        Align: =Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, .7)
+        DisabledColor: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+        Fill: =RGBA(0, 0, 0, .8)
+        Height: =74
+        HoverBorderColor: =lb_tapAnywhere.BorderColor
+        HoverColor: =lb_tapAnywhere.Color
+        HoverFill: =lb_tapAnywhere.Fill
+        PressedBorderColor: =lb_tapAnywhere.BorderColor
+        PressedColor: =lb_tapAnywhere.Color
+        PressedFill: =lb_tapAnywhere.Fill
+        Text: ="Tap anywhere above to take a photo"
+        VerticalAlign: =Middle
+        Visible: =CameraVisible
+        Width: =800
+        X: =565
+        Y: =694
         ZIndex: =14
 
