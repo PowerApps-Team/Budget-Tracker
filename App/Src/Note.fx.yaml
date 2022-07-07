@@ -18,6 +18,7 @@ Note As screen:
             ="tên màn hình: s_name
             Tên biến: _name
             tên label: lb_name
+            text input: tinput_name
             tên collection: col_name
             gallery: g_name
             container: cnt_name
