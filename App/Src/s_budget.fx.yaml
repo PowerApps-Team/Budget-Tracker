@@ -39,10 +39,10 @@ s_budget As screen:
 
     "g_all As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =569
-        Items: =CustomGallerySample
+        Items: =data_Budgets
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(160, Self.Height - 60)
+        TemplateSize: =218
         Width: =442
         Y: =198
         ZIndex: =5
@@ -50,23 +50,23 @@ s_budget As screen:
         Image1 As image:
             Height: =128
             OnSelect: =Select(Parent)
-            Width: =128
-            X: =16
+            Width: =0
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
         Title1 As label:
+            AutoHeight: =true
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.SampleHeading
+            Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image1.Width - 104
-            X: =Image1.X + Image1.Width + 24
-            Y: =44
+            X: =19
+            Y: =16
             ZIndex: =2
 
         Subtitle1 As label:
@@ -76,11 +76,11 @@ s_budget As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.SampleText
+            Text: =ThisItem.BudgetAmount
             VerticalAlign: =VerticalAlign.Top
             Width: =Title1.Width
-            X: =Title1.X
-            Y: =Title1.Y + Title1.Height + 4
+            X: =19
+            Y: =86
             ZIndex: =3
 
         NextArrow1 As icon.ChevronRight:
@@ -105,6 +105,46 @@ s_budget As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+        Label3 As label:
+            Height: =28
+            OnSelect: =Select(Parent)
+            Text: ="Budgeted"
+            X: =19
+            Y: =50
+            ZIndex: =6
+
+        Label5 As label:
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Spent"
+            X: =19
+            Y: =127
+            ZIndex: =7
+
+        Label5_1 As label:
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Remaining"
+            X: =287
+            Y: =127
+            ZIndex: =8
+
+        Label6 As label:
+            OnSelect: =Select(Parent)
+            Text: =10
+            X: =19
+            Y: =158
+            ZIndex: =9
+
+        Label7 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.BudgetAmount - Label6.Text
+            X: =287
+            Y: =158
+            ZIndex: =10
 
     TextBox2 As label:
         BorderColor: =RGBA(0, 0, 0, 1)
