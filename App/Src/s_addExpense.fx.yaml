@@ -357,10 +357,12 @@ s_addExpense As screen:
             DataCardValue5 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: |-
-                    =
-                    LookUp(data_expenses,BudgetId.Value=g_allBudget.Selected.ID).BudgetId
-                    
-                    //LookUp(data_Budgets;ID=g_allBudget.Selected.ID)
+                    =//LookUp(data_expenses;BudgetId.Value=g_allBudget.Selected.ID).BudgetId
+                    {
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                        Id: g_allBudget.Selected.BudgetId,
+                        Value: g_allBudget.Selected.BudgetId
+                    }
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 IsSearchable: =false
@@ -428,8 +430,12 @@ s_addExpense As screen:
             DataCardValue6 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: |-
-                    =//LookUp(data_Budgets;ID=g_allBudget.Selected.ID)
-                    LookUp(data_expenses,BudgetId.Value=g_allBudget.Selected.ID).BudgetTitle
+                    =//LookUp(data_expenses;BudgetId.Value=g_allBudget.Selected.ID).BudgetTitle
+                    {
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                        Id: g_allBudget.Selected.BudgetId,
+                        Value: g_allBudget.Selected.Title
+                    }
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Items: =Choices([@data_expenses].BudgetTitle)

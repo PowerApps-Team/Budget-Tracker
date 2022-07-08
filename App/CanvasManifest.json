@@ -87,11 +87,11 @@
     "Id": "beed7034-9fa8-402e-9b43-3485571b07c2",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "Budget-Tracker-hoang",
+    "Name": "Budget-Tracker",
     "OriginatingVersion": "1.324"
   },
   "PublishInfo": {
-    "AppName": "Budget-Tracker-hoang",
+    "AppName": "Budget-Tracker",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
