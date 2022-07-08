@@ -91,7 +91,7 @@
     "OriginatingVersion": "1.324"
   },
   "PublishInfo": {
-    "AppName": "Budget-Tracker",
+    "AppName": "Budget-Tracker-hoang",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -99,7 +99,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "en-US"
+    "UserLocale": "vi-VN"
   },
   "ScreenOrder": [
     "Note",
