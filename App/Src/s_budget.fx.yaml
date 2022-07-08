@@ -197,8 +197,8 @@ s_budget As screen:
             TabIndex: =0
             Tooltip: ="Xem chi tiết mục"
             Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            X: =293
+            Y: =42
             ZIndex: =3
 
         Separator1 As rectangle:
@@ -207,6 +207,16 @@ s_budget As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =4
+
+        Icon1 As icon.Check:
+            Height: =42
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Select(Parent);
+                Navigate(s_DeleteExpense)
+            Width: =42
+            X: =310
+            ZIndex: =5
 
     Rectangle1 As rectangle:
         Fill: =RGBA(0, 164, 228, 1)
