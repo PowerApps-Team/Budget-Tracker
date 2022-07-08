@@ -358,7 +358,7 @@ s_addExpense As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: |-
                     =
-                    LookUp(data_expenses,BudgetId.Value=g_allBudget.Selected.ID).BudgetId
+                    LookUp(data_expenses,BudgetId.Value=g_allBudget.Selected.BudgetId).BudgetId
                     
                     //LookUp(data_Budgets;ID=g_allBudget.Selected.ID)
                 DisplayFields: =["Value"]
@@ -429,7 +429,7 @@ s_addExpense As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: |-
                     =//LookUp(data_Budgets;ID=g_allBudget.Selected.ID)
-                    LookUp(data_expenses,BudgetId.Value=g_allBudget.Selected.ID).BudgetTitle
+                    LookUp(data_expenses,BudgetId.Value=g_allBudget.Selected.BudgetId).BudgetTitle
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Items: =Choices([@data_expenses].BudgetTitle)
@@ -537,7 +537,7 @@ s_addExpense As screen:
         "'Tệp đính kèm_DataCard1' As typedDataCard.attachmentsEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
-            Default: =ThisItem.'Tệp đính kèm'
+            Default: =ThisItem.Attachments
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)

@@ -8,6 +8,7 @@ s_DeleteExpense As screen:
         Height: =50
         HoverBorderColor: =
         HoverFill: =
+        OnSelect: =Back()
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -34,6 +35,10 @@ s_DeleteExpense As screen:
         Height: =50
         HoverBorderColor: =
         HoverFill: =
+        OnSelect: |-
+            =//g_expenses.Selected;
+            Remove( IceCream,
+            First( Filter( IceCream, Flavor="Chocolate" ) ) )
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
