@@ -14,86 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.Default"
-                }
-              ],
-              "properties": {
-                "member": "Default",
-                "module": "s_addExpense",
-                "type": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".Attachments"
-                  }
-                }
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Attachments"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "s_budget.lb_totalBudgetAllBuget.Text"
-                }
-              ],
-              "properties": {
-                "member": "Text",
-                "module": "s_budget",
-                "type": "s_budget.lb_totalBudgetAllBuget"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_budget.lb_totalBudgetAllBuget.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 30,
-                  "charOffset": 110,
-                  "snippet": {
-                    "text": "Sum(data_Budgets;BudgetAmount)"
-                  }
-                }
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Sum"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "s_DeleteExpense.btn_Delete_DeleteExpense.OnSelect"
                 }
               ],
@@ -207,7 +127,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -288,7 +208,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -325,7 +245,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrCollectionDoesNotAcceptThisType",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -365,157 +285,87 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_viewReceipt.Rectangle4_3.AccessibleLabel"
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.Default"
                 }
               ],
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "s_viewReceipt",
-                "type": "s_viewReceipt.Rectangle4_3"
+                "member": "Default",
+                "module": "s_addExpense",
+                "type": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_viewReceipt.Rectangle4_3.AccessibleLabel",
+                  "fullyQualifiedName": "s_addExpense.f_NewExpense.'Tệp đính kèm_DataCard1'.Default",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".Attachments"
+                  }
                 }
               }
             }
           ],
           "message": {
+            "arguments": [
+              "Attachments"
+            ],
             "id": "issue"
           },
           "properties": {
-            "level": "Medium"
+            "level": "High"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "s_viewReceipt.Rectangle1_3.AccessibleLabel"
+                  "fullyQualifiedName": "s_budget.lb_totalBudgetAllBuget.Text"
                 }
               ],
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "s_viewReceipt",
-                "type": "s_viewReceipt.Rectangle1_3"
+                "member": "Text",
+                "module": "s_budget",
+                "type": "s_budget.lb_totalBudgetAllBuget"
               },
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "s_viewReceipt.Rectangle1_3.AccessibleLabel",
+                  "fullyQualifiedName": "s_budget.lb_totalBudgetAllBuget.Text",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 30,
+                  "charOffset": 110,
+                  "snippet": {
+                    "text": "Sum(data_Budgets;BudgetAmount)"
+                  }
                 }
               }
             }
           ],
           "message": {
+            "arguments": [
+              "Sum"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "s_viewReceipt.Rectangle4_4.AccessibleLabel"
-                }
-              ],
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "s_viewReceipt",
-                "type": "s_viewReceipt.Rectangle4_4"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_viewReceipt.Rectangle4_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "s_viewReceipt.icon4.AccessibleLabel"
-                }
-              ],
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "s_viewReceipt",
-                "type": "s_viewReceipt.icon4"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_viewReceipt.icon4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "s_viewReceipt.ic_receiptBack.AccessibleLabel"
-                }
-              ],
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "s_viewReceipt",
-                "type": "s_viewReceipt.ic_receiptBack"
-              },
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "s_viewReceipt.ic_receiptBack.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -906,6 +756,156 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_viewReceipt.Rectangle4_3.AccessibleLabel"
+                }
+              ],
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "s_viewReceipt",
+                "type": "s_viewReceipt.Rectangle4_3"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_viewReceipt.Rectangle4_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_viewReceipt.Rectangle1_3.AccessibleLabel"
+                }
+              ],
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "s_viewReceipt",
+                "type": "s_viewReceipt.Rectangle1_3"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_viewReceipt.Rectangle1_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_viewReceipt.Rectangle4_4.AccessibleLabel"
+                }
+              ],
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "s_viewReceipt",
+                "type": "s_viewReceipt.Rectangle4_4"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_viewReceipt.Rectangle4_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_viewReceipt.icon4.AccessibleLabel"
+                }
+              ],
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "s_viewReceipt",
+                "type": "s_viewReceipt.icon4"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_viewReceipt.icon4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "s_viewReceipt.ic_receiptBack.AccessibleLabel"
+                }
+              ],
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "s_viewReceipt",
+                "type": "s_viewReceipt.ic_receiptBack"
+              },
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "s_viewReceipt.ic_receiptBack.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1681,25 +1681,6 @@
               }
             },
             {
-              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-              "messageStrings": {
-                "issue": {
-                  "text": "Delegation warning. The highlighted part of this formula might not work correctly on large data sets. The \"{0}\" operation is not supported by this connector."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
-                  "Try simplifying the formula.",
-                  "Try moving your data to a different data source."
-                ],
-                "level": "Medium",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrInvalidArgs-Func",
               "messageStrings": {
                 "issue": {
@@ -1742,6 +1723,25 @@
                 "componentType": "app",
                 "howToFix": [
                   "You might need to convert the type of the item using, for example, a Datevalue, Text, or Value function."
+                ],
+                "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+              "messageStrings": {
+                "issue": {
+                  "text": "Delegation warning. The highlighted part of this formula might not work correctly on large data sets. The \"{0}\" operation is not supported by this connector."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
+                  "Try simplifying the formula.",
+                  "Try moving your data to a different data source."
                 ],
                 "level": "Medium",
                 "primaryCategory": "formula",

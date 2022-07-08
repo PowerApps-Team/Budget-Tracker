@@ -676,7 +676,7 @@ s_addExpense As screen:
             HoverBorderColor: =ColorFade(btn_useImage.BorderColor, 20%)
             HoverColor: =btn_useImage.Color
             HoverFill: =btn_useImage.Fill
-            OnSelect: =
+            OnSelect: =//UpdateContext({
             PressedBorderColor: =btn_useImage.Fill
             PressedColor: =btn_useImage.Color
             PressedFill: =ColorFade(btn_useImage.Fill, 10%)
