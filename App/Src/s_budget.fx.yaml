@@ -477,8 +477,8 @@ s_budget As screen:
         Height: =272
         Items: =PieChartSample
         Width: =517
-        X: =418
-        Y: =188
+        X: =404
+        Y: =199
         ZIndex: =16
 
     lb_columnExpense As label:

@@ -192,7 +192,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "g_allBudget",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5628,7 +5628,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_titleAttachedColumn",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5931,7 +5931,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_titleTotalSpent",
-      "ParentIndex": 13,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6857,7 +6857,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lb_totalExpenseOfABudget",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8491,7 +8491,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%PieChart.ID%",
       "Name": "PieChart",
-      "ParentIndex": 15,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

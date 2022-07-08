@@ -1,6 +1,6 @@
 s_addExpense As screen:
     OnVisible: |-
-        =UpdateContext({CameraVisible:true})
+        =UpdateContext({CameraVisible:true,ImageVisible:false,_imageId:0})
 
     Rectangle12 As rectangle:
         BorderColor: =RGBA(0, 0, 255, 1)
@@ -14,32 +14,6 @@ s_addExpense As screen:
         X: =565
         Y: =80
         ZIndex: =1
-
-    "g_imgageList As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-        DisabledBorderColor: =g_imgageList.BorderColor
-        DisabledFill: =g_imgageList.Fill
-        Height: =206
-        HoverBorderColor: =g_imgageList.BorderColor
-        HoverFill: =g_imgageList.Fill
-        Items: =col_receipts
-        PressedBorderColor: =g_imgageList.BorderColor
-        PressedFill: =g_imgageList.Fill
-        TemplatePadding: =0
-        TemplateSize: =Min(440, Self.Height - 60)
-        Width: =491
-        WrapCount: =2
-        X: =45
-        Y: =448
-        ZIndex: =1
-
-        Image1 As image:
-            Height: =116
-            Image: =ThisItem.ReceiptImage
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth - 32
-            X: =5
-            Y: =25
-            ZIndex: =1
 
     gr_addExpenseBack As group:
         Height: =60
@@ -107,7 +81,35 @@ s_addExpense As screen:
         HoverBorderColor: =btn_saveExpense.BorderColor
         HoverColor: =btn_saveExpense.Color
         HoverFill: =btn_saveExpense.Fill
-        OnSelect: =SubmitForm(f_NewExpense)
+        OnSelect: |-
+            =SubmitForm(f_NewExpense);
+            ForAll(
+                //col_receipts;
+                g_imageList.AllItems,
+                Patch(
+                    data_receipts,
+                    Defaults(data_receipts),
+                    {Title: "image"},
+                    {
+                        BudgetID: {
+                            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                            Id: g_allBudget.Selected.ID,
+                            Value: g_allBudget.Selected.ID
+                        }
+                    },
+                    {
+                        ExpenseID: {
+                            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                            Id: Value(Last(g_expenses.AllItems).ID + 1),
+                            Value: Value(Last(g_expenses.AllItems).ID + 1)
+                        }
+                    }
+                    ,{
+                       ReceiptImages:img_item
+                    }
+                )
+            );
+            Clear(col_receipts)
         PressedBorderColor: =btn_saveExpense.BorderColor
         PressedColor: =btn_saveExpense.Color
         PressedFill: =ColorFade(btn_saveExpense.Fill, 10%)
@@ -146,8 +148,8 @@ s_addExpense As screen:
         OnSelect: |-
             =UpdateContext({CameraVisible:false,ImageVisible:true})
         Visible: =CameraVisible
-        Width: =801
-        X: =562
+        Width: =785
+        X: =577
         Y: =113
         ZIndex: =5
 
@@ -174,16 +176,16 @@ s_addExpense As screen:
         AcceptsFocus: =false
         BorderColor: =RGBA(180, 180, 180, 1)
         DataSource: =data_expenses
-        Height: =330
+        Height: =316
         Item: =//Defaults(Expenses)
         NumberOfColumns: =1
-        OnSuccess: |-
+        OnSuccess: |+
             =
-            Navigate(s_budget,None);ResetForm(f_NewExpense)
+            Navigate(s_budget,None);ResetForm(f_NewExpense);
             
             
-            //Navigate(BudgetScreen;ScreenTransition.Fade);;ResetForm(FormNewExpense)
-        Width: =562
+            
+        Width: =564
         X: =3
         Y: =113
         ZIndex: =11
@@ -195,11 +197,11 @@ s_addExpense As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"Title")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =80
             MaxLength: =DataSourceInfo([@data_expenses], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue3.Text
-            Width: =562
+            Width: =564
             X: =0
             Y: =0
             ZIndex: =12
@@ -263,10 +265,10 @@ s_addExpense As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"ExpensesAmount")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =81
             Required: =false
             Update: =Value(DataCardValue4.Text)
-            Width: =562
+            Width: =564
             X: =0
             Y: =1
             ZIndex: =12
@@ -323,55 +325,47 @@ s_addExpense As screen:
                 Y: =DataCardKey4.Y
                 ZIndex: =4
 
-        BudgetId_DataCard1 As typedDataCard.comboBoxEditCard:
+        Category_DataCard1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="BudgetId"
-            Default: =ThisItem.BudgetId
+            DataField: ="Category"
+            Default: =ThisItem.Category
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"BudgetId")
+            DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"Category")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =117
             Required: =false
-            Update: =DataCardValue5.Selected
-            Visible: =false
-            Width: =562
+            Update: =DataCardValue7.Selected
+            Width: =564
             X: =0
             Y: =2
             ZIndex: =12
 
-            DataCardKey5 As label:
+            DataCardKey7 As label:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
                 ZIndex: =1
 
-            DataCardValue5 As combobox:
+            DataCardValue7 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: |-
-                    ={
-                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
-                        Id: g_allBudget.Selected.BudgetId,
-                        Value: g_allBudget.Selected.BudgetId
-                    }
+                DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                IsSearchable: =false
-                Items: =Choices(data_expenses.BudgetId)
+                Items: =Choices([@data_expenses].Category)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =[]
+                SearchItems: =Choices(data_expenses.Category,DataCardValue7.SearchText)
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
                 ZIndex: =2
 
-            ErrorMessage5 As label:
+            ErrorMessage7 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -383,17 +377,17 @@ s_addExpense As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue5.Y + DataCardValue5.Height
+                Y: =DataCardValue7.Y + DataCardValue7.Height
                 ZIndex: =3
 
-            StarVisible5 As label:
+            StarVisible7 As label:
                 Align: =Align.Center
-                Height: =DataCardKey5.Height
+                Height: =DataCardKey7.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey5.Y
+                Y: =DataCardKey7.Y
                 ZIndex: =4
 
         BudgetTitle_DataCard1 As typedDataCard.comboBoxEditCard:
@@ -407,7 +401,7 @@ s_addExpense As screen:
             Required: =false
             Update: =DataCardValue6.Selected
             Visible: =false
-            Width: =562
+            Width: =564
             X: =0
             Y: =3
             ZIndex: =12
@@ -468,22 +462,23 @@ s_addExpense As screen:
                 Y: =DataCardKey6.Y
                 ZIndex: =4
 
-        Category_DataCard1 As typedDataCard.comboBoxEditCard:
+        BudgetId_DataCard1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Category"
-            Default: =ThisItem.Category
+            DataField: ="BudgetId"
+            Default: =ThisItem.BudgetId
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"Category")
+            DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"BudgetId")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue7.Selected
-            Width: =562
+            Update: =DataCardValue5.Selected
+            Visible: =false
+            Width: =564
             X: =0
             Y: =4
             ZIndex: =12
 
-            DataCardKey7 As label:
+            DataCardKey5 As label:
                 AutoHeight: =true
                 Height: =34
                 Text: =Parent.DisplayName
@@ -493,23 +488,29 @@ s_addExpense As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue7 As combobox:
+            DataCardValue5 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: |-
+                    ={
+                        '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+                        Id: g_allBudget.Selected.BudgetId,
+                        Value: g_allBudget.Selected.BudgetId
+                    }
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@data_expenses].Category)
+                IsSearchable: =false
+                Items: =Choices(data_expenses.BudgetId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(data_expenses.Category,DataCardValue7.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
                 ZIndex: =2
 
-            ErrorMessage7 As label:
+            ErrorMessage5 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -521,82 +522,17 @@ s_addExpense As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
+                Y: =DataCardValue5.Y + DataCardValue5.Height
                 ZIndex: =3
 
-            StarVisible7 As label:
+            StarVisible5 As label:
                 Align: =Align.Center
-                Height: =DataCardKey7.Height
+                Height: =DataCardKey5.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey7.Y
-                ZIndex: =4
-
-        "'Tệp đính kèm_DataCard1' As typedDataCard.attachmentsEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="{Attachments}"
-            Default: =//ThisItem.Attachments
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"{Attachments}")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue8.Attachments
-            Width: =562
-            X: =0
-            Y: =5
-            ZIndex: =12
-
-            DataCardKey8 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue8 As attachments:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DisplayMode: =Parent.DisplayMode
-                IsInDataCard: =true
-                Items: =g_imgageList.AllItems
-                PaddingBottom: =5
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PaddingRight: =5
-                PaddingTop: =5
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
-                ZIndex: =2
-
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue8.Y + DataCardValue8.Height
-                ZIndex: =3
-
-            StarVisible8 As label:
-                Align: =Align.Center
-                Height: =DataCardKey8.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey8.Y
+                Y: =DataCardKey5.Y
                 ZIndex: =4
 
     lb_titleBudget As label:
@@ -620,7 +556,7 @@ s_addExpense As screen:
         Width: =440
         Wrap: =false
         X: =3
-        Y: =80
+        Y: =63
         ZIndex: =12
 
     gr_btnTakeImg As group:
@@ -708,4 +644,25 @@ s_addExpense As screen:
         X: =565
         Y: =694
         ZIndex: =14
+
+    "g_imageList As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =240
+        Items: =col_receipts
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =120
+        Width: =517
+        WrapCount: =3
+        X: =33
+        Y: =423
+        ZIndex: =15
+
+        img_item As image:
+            Height: =90
+            Image: =ThisItem.ReceiptImage
+            OnSelect: =Select(Parent)
+            Width: =125
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
 

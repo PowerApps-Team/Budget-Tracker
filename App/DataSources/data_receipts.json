@@ -35,6 +35,7 @@
       "ExpenseID#Id": "ExpenseID Id",
       "ID": "ID",
       "Modified": "Modified",
+      "ReceiptImage": "ReceiptImages",
       "Title": "Title"
     },
     "DatasetName": "https://m365x58945129.sharepoint.com/sites/esdoteam",

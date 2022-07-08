@@ -102,13 +102,13 @@
     "UserLocale": "vi-VN"
   },
   "ScreenOrder": [
-    "Note",
     "s_budget",
     "s_add_budget",
     "s_deleteBudget",
     "s_DeleteExpense",
     "s_DeleteReceipt",
     "s_viewReceipt",
-    "s_addExpense"
+    "s_addExpense",
+    "Note"
   ]
 }
