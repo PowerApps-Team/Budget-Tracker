@@ -15,6 +15,32 @@ s_addExpense As screen:
         Y: =80
         ZIndex: =1
 
+    "g_imgageList As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        DisabledBorderColor: =g_imgageList.BorderColor
+        DisabledFill: =g_imgageList.Fill
+        Height: =206
+        HoverBorderColor: =g_imgageList.BorderColor
+        HoverFill: =g_imgageList.Fill
+        Items: =col_receipts
+        PressedBorderColor: =g_imgageList.BorderColor
+        PressedFill: =g_imgageList.Fill
+        TemplatePadding: =0
+        TemplateSize: =Min(440, Self.Height - 60)
+        Width: =491
+        WrapCount: =2
+        X: =45
+        Y: =448
+        ZIndex: =1
+
+        Image1 As image:
+            Height: =116
+            Image: =ThisItem.ReceiptImage
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth - 32
+            X: =5
+            Y: =25
+            ZIndex: =1
+
     gr_addExpenseBack As group:
         Height: =60
         Width: =60
@@ -28,7 +54,7 @@ s_addExpense As screen:
             Fill: =RGBA(0,164,228,228)
             Height: =80
             HoverFill: =Rectangle4_2.Fill
-            OnSelect: =Back();ResetForm(f_NewExpense)
+            OnSelect: =Back();Clear(col_receipts);ResetForm(f_NewExpense)
             PressedFill: =Rectangle4_2.Fill
             TabIndex: =0
             Width: =97
@@ -46,7 +72,7 @@ s_addExpense As screen:
             HoverColor: =ColorFade(ic_aackAddExpense.Color, 20%)
             HoverFill: =ic_aackAddExpense.Fill
             Icon: =Icon.ChevronLeft
-            OnSelect: =Back()
+            OnSelect: =Back();Clear(col_receipts);ResetForm(f_NewExpense)
             PressedBorderColor: =ColorFade(ic_aackAddExpense.BorderColor, -20%)
             PressedColor: =ColorFade(ic_aackAddExpense.Color, -20%)
             PressedFill: =ic_aackAddExpense.Fill
@@ -124,38 +150,6 @@ s_addExpense As screen:
         X: =562
         Y: =113
         ZIndex: =5
-
-    g_imgageList As gallery.imageGalleryHorizontal:
-        DisabledBorderColor: =g_imgageList.BorderColor
-        DisabledFill: =g_imgageList.Fill
-        Height: =206
-        HoverBorderColor: =g_imgageList.BorderColor
-        HoverFill: =g_imgageList.Fill
-        Items: =//Filter(ReceiptsCollect; ExpenseId = varExpenseId + 1)
-        PressedBorderColor: =g_imgageList.BorderColor
-        PressedFill: =g_imgageList.Fill
-        TemplatePadding: =0
-        TemplateSize: =396
-        Width: =500
-        X: =37
-        Y: =448
-        ZIndex: =6
-
-        img_inListImg As image:
-            ApplyEXIFOrientation: =false
-            AutoDisableOnSelect: =false
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisabledBorderColor: =RGBA(159, 167, 165, 1)
-            DisabledFill: =RGBA(193, 193, 193, 0.95)
-            Height: =89.9999999999999
-            HoverBorderColor: =ColorFade(img_inListImg.BorderColor, 20%)
-            HoverFill: =ColorFade(img_inListImg.Fill, 20%)
-            Image: =//ThisItem.ReceiptImage
-            ImagePosition: =ImagePosition.Fill
-            PressedBorderColor: =ColorFade(img_inListImg.BorderColor, -20%)
-            PressedFill: =ColorFade(img_inListImg.Fill, -20%)
-            Width: =90
-            ZIndex: =1
 
     img_expense As image:
         ApplyEXIFOrientation: =false
@@ -339,6 +333,7 @@ s_addExpense As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue5.Selected
+            Visible: =false
             Width: =562
             X: =0
             Y: =2
@@ -411,6 +406,7 @@ s_addExpense As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue6.Selected
+            Visible: =false
             Width: =562
             X: =0
             Y: =3
@@ -541,7 +537,7 @@ s_addExpense As screen:
         "'Tệp đính kèm_DataCard1' As typedDataCard.attachmentsEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
-            Default: =ThisItem.Attachments
+            Default: =//ThisItem.Attachments
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@data_expenses],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
@@ -567,7 +563,7 @@ s_addExpense As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
                 IsInDataCard: =true
-                Items: =Parent.Default
+                Items: =g_imgageList.AllItems
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
@@ -676,7 +672,8 @@ s_addExpense As screen:
             HoverBorderColor: =ColorFade(btn_useImage.BorderColor, 20%)
             HoverColor: =btn_useImage.Color
             HoverFill: =btn_useImage.Fill
-            OnSelect: =//UpdateContext({
+            OnSelect: |-
+                =Collect(col_receipts,{ReceiptImage:Camera.Photo});UpdateContext({CameraVisible:true,ImageVisible:false})
             PressedBorderColor: =btn_useImage.Fill
             PressedColor: =btn_useImage.Color
             PressedFill: =ColorFade(btn_useImage.Fill, 10%)
