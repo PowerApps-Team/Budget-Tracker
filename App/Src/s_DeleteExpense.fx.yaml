@@ -37,8 +37,9 @@ s_DeleteExpense As screen:
         HoverFill: =
         OnSelect: |-
             =//g_expenses.Selected;
-            Remove( IceCream,
-            First( Filter( IceCream, Flavor="Chocolate" ) ) )
+            Remove( data_expenses,
+            First( Filter( data_expenses, ExpenId= g_expenses.Selected.ExpenId ) ) );
+            Back()
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
